@@ -8,7 +8,9 @@ import Signup from './views/auth/Signup';
 import Login from './views/auth/Login';
 import PrivateView from './views/PrivateView';
 import IsPrivate from './components/IsPrivate';
-import FormReview from './views/FormReview';
+import NewReview from './views/NewReview';
+import Reviews from './views/Reviews';
+
 
 function App() {
   return (
@@ -20,7 +22,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/private" element={<IsPrivate><PrivateView/></IsPrivate>}/>
-        <Route path="/create" element={<FormReview/>}/>
+        <Route path="/create" element={<NewReview/>}/>
+        <Route path="/reviews" element={<Reviews/>}/>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

@@ -12,7 +12,7 @@ export default function Home() {
     <h1>Home</h1>
     {user && <p>Hello {user.username}</p> }
     {isLoggedIn && <NavLink className={(element) => element.isActive ? 'selected' : ''} to="/create">Add new Review</NavLink>}
-
+    {isLoggedIn && <NavLink className={(element) => element.isActive ? 'selected' : ''} to="/reviews">See all Reviews</NavLink>}
     </div>
   )
 }
