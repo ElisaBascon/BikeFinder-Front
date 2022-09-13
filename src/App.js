@@ -8,9 +8,12 @@ import Signup from './views/auth/Signup';
 import Login from './views/auth/Login';
 import PrivateView from './views/PrivateView';
 import IsPrivate from './components/IsPrivate';
-import NewReview from './views/NewReview';
-import Reviews from './views/Reviews';
-import Bikes from './views/Bikes';
+import NewReview from './views/reviews/NewReview';
+import Reviews from './views/reviews/Reviews';
+import MyReviews from './views/reviews/MyReviews';
+import Bikes from './views/bikes/Bikes';
+
+
 
 
 function App() {
@@ -25,10 +28,10 @@ function App() {
         <Route path="/private" element={<IsPrivate><PrivateView/></IsPrivate>}/>
         <Route path="/newreview" element={<NewReview/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
-        <Route path="/mybikes" element={<Bikes/>}/>
+        <Route path="/reviews/:id" element={<MyReviews/>}/>
+        <Route path="/bikes" element={<Bikes/>}/>
         <Route path="*" element={<ErrorPage />} />
         {/* Ruta /:id (detalle de bici) */}
-        {/* Ruta /reviews/:id (detalle de review) */}
       </Routes>
     </div>
   );

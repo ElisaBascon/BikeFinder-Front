@@ -28,8 +28,7 @@ export default function FormReview() {
             const newReview = await axios.post('http://localhost:8000/api/v1/review', review, { headers: { Authorization: `Bearer ${storedToken}` } });
             toast.success('Review created sucessfully')
             console.log(newReview)
-            navigate(`/create/${newReview.data.data._id}`)
-
+            navigate(`/reviews/${newReview.data.data._id}`)
         } catch (error) {
             console.error(error)
         }
