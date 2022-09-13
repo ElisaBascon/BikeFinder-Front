@@ -10,6 +10,7 @@ import PrivateView from './views/PrivateView';
 import IsPrivate from './components/IsPrivate';
 import NewReview from './views/NewReview';
 import Reviews from './views/Reviews';
+import Bikes from './views/Bikes';
 
 
 function App() {
@@ -22,9 +23,12 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/private" element={<IsPrivate><PrivateView/></IsPrivate>}/>
-        <Route path="/create" element={<NewReview/>}/>
+        <Route path="/newreview" element={<NewReview/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
+        <Route path="/mybikes" element={<Bikes/>}/>
         <Route path="*" element={<ErrorPage />} />
+        {/* Ruta /:id (detalle de bici) */}
+        {/* Ruta /reviews/:id (detalle de review) */}
       </Routes>
     </div>
   );

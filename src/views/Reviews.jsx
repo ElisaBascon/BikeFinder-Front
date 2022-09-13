@@ -16,7 +16,7 @@ export default function Reviews() {
             }
         }
     getData();
-}, [])
+}, )
 
 return (
     <div>
