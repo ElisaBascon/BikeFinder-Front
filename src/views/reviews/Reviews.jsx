@@ -22,7 +22,7 @@ return (
     <div>
         {!reviews && <p>loading</p>}
         {reviews && reviews.map(review => {
-            return <p key={review._id}><Link to={`/review/${review._id}`}>{review}</Link></p>
+            return (<p key={review._id}><Link to={`/review/${review._id}`}>{review}</Link></p>)
         })}
         <Outlet/>
     </div>
