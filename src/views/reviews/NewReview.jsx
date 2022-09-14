@@ -26,7 +26,7 @@ export default function FormReview() {
         const uploadData = new FormData();
         uploadData.append("imageUrl", e.target.files[0]);
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/projects/upload`, uploadData);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/review/upload`, uploadData);
             console.log(response.data.fileUrl);
 
             setReview(prev => {
@@ -57,10 +57,10 @@ export default function FormReview() {
     return(
         <div>
             <form onSubmit={handleSubmit}>
-            <input type="text" name="image" placeholder="Image" value={review.image} onChange={handleChange} />
-            <input type="text" name="title" placeholder="Title" value={review.title} onChange={handleChange} />
-            <input type="text" name="description" placeholder="Description" value={review.description} onChange={handleChange} />
-            <button type="submit">Create</button>
+                <input type="file" onChange={(e) => handleFileUpload(e)} />
+                <input type="text" name="title" placeholder="Title" value={review.title} onChange={handleChange} />
+                <input type="text" name="description" placeholder="Description" value={review.description} onChange={handleChange} />
+                <button type="submit">Create</button>
             </form>
         </div>
     )
