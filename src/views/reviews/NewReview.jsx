@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function FormReview() {
 
-    const storedToken = localStorage.getItem('authToken')
+    const storedToken = localStorage.getItem('authToken');
     const navigate = useNavigate();
     const [review, setReview ] = useState ({
-        image:'',
+        imageUrl:'',
         title: '',
         description:''
     })
@@ -21,6 +21,26 @@ export default function FormReview() {
             }
         })
     }
+
+    const handleFileUpload = async(e) => {
+        const uploadData = new FormData();
+        uploadData.append("imageUrl", e.target.files[0]);
+        try {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/projects/upload`, uploadData);
+            console.log(response.data.fileUrl);
+
+            setReview(prev => {
+                return {
+                    ...prev,
+                    imageUrl: response.data.fileUrl
+                }
+            })
+        } catch (error) {
+            console.error(error);
+        }
+        }
+    
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();

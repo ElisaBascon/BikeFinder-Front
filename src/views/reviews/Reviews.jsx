@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import axios from "axios";
 
 export default function Reviews() {
-    const storedToken = localStorage.getItem('authToken')
+    const storedToken = localStorage.getItem('authToken');
     const [ reviews, setReviews] = useState(null);
     
     useEffect(() => {

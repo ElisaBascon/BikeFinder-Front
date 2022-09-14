@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Reviews() {
-    const storedToken = localStorage.getItem('authToken')
+    
+    const storedToken = localStorage.getItem('authToken');
     const [ review, setReviews] = useState(null);
     
     useEffect(() => {
