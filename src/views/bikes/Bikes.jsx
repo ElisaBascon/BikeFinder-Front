@@ -9,7 +9,7 @@ export default function Reviews() {
     useEffect(() => {
         const getData = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/v1/bike', bikes, { headers: { Authorization: `Bearer ${storedToken}` } })
+                const response = await axios.get('http://localhost:8000/api/v1/bike', { headers: { Authorization: `Bearer ${storedToken}` } })
                 setBikes(response.data.data);
             } catch (error) {
                 console.log(error)
@@ -22,7 +22,7 @@ return (
     <div>
         {!bikes && <p>loading</p>}
         {bikes && bikes.map(bike => {
-            return <p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike}</Link></p>
+            return <p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name}</Link></p>
         })}
         <Outlet/>
     </div>
