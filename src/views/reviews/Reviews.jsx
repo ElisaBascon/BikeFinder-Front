@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from "axios";
+
 
 export default function Reviews() {
     const storedToken = localStorage.getItem('authToken');
@@ -23,9 +24,12 @@ return (
     <div>
         {!reviews && <p>loading</p>}
         {reviews && reviews.map(review => {
-            return (<p key={review._id}><Link to={`/review/${review._id}`}>{review.title}</Link></p>)
+            return (
+                <div key={review._id}>
+                    <img width="200px" src={review.imageUrl} alt={review.title}/> 
+                    <h2><Link to={`/review/${review._id}`}>{review.title}</Link></h2> 
+                </div>)
         })} 
-        <Outlet/>
     </div>
 )
 
