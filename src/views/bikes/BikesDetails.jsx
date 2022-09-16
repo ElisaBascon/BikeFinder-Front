@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
+function Button({children}) {
+    return <button>{children}</button>;
+}
+
 export default function Reviews() {
     const {id} = useParams(); 
     const storedToken = localStorage.getItem('authToken');
@@ -28,7 +32,10 @@ return (
                 <h2>{bike.name}</h2> 
                 <p>{bike.description}</p>
                 <p>{bike.price}</p> 
-                <p>{bike.url}</p>  
+                <a href={bike.url} target="_blank" rel="noreferrer">
+                    <Button>Buy</Button>
+                </a>
+                {/* <p>{bike.url}</p>   */}
             </div>
         )}
     </div>
