@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import toast from 'react-hot-toast';
-import { Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 
 export default function Reviews() {
     const {id} = useParams(); 
     const storedToken = localStorage.getItem('authToken');
-    const [ myReview, setMyReviews] = useState(null);
+    const [ myReviews, setMyReviews] = useState(null);
     
     useEffect(() => {
         const getData = async () => {
@@ -34,16 +34,16 @@ const handleDelete = async () => {
 return (
     <div>
         <p>My reviews</p>
-        {myReview && (
-            <div>
-                <img width="200px" src={myReview.imageUrl} alt={myReview.title}/> 
-                <h2>{myReview.title}</h2> 
-                <p>{myReview.description}</p>
-                <button onClick={handleDelete}>Delete</button> 
-                <button onClick={() => Navigate(`/edit/${id}`)}>Edit</button> 
-            </div>
-        )}
-        {!myReview && <p>Review not found</p>}
+        {!myReviews && <p>loading</p>}
+        {myReviews && myReviews.map(review => {
+            return (
+                <div key={review._id}>
+                    <img width="200px" src={review.imageUrl} alt={review.title}/> 
+                    <h2 key={review._id} ><Link to={`/review/${review._id}`}>{review.title}</Link></h2>
+                    <button onClick={() => Navigate(`/edit/${id}`)}>Edit</button>  
+                    <button onClick={handleDelete}>Delete</button> 
+                </div>)
+        })} 
     </div>
 )
 

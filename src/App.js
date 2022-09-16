@@ -11,9 +11,11 @@ import IsPrivate from './components/IsPrivate';
 import NewReview from './views/reviews/NewReview';
 import Reviews from './views/reviews/Reviews';
 import ReviewDetails from './views/reviews/ReviewDetails';
+import MyReviews from './views/reviews/MyReviews';
+import EditReview from './views/reviews/EditReview';
 import Bikes from './views/bikes/Bikes';
 import BikesDetails from './views/bikes/BikesDetails';
-import MyReviews from './views/reviews/MyReviews';
+
 
 
 
@@ -31,7 +33,9 @@ function App() {
         <Route path="/newreview" element={<NewReview/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
         <Route path="/review/:id" element={<ReviewDetails/>}/>
-        <Route path="/review/:id" element={<MyReviews/>}/>
+        {/*MyReviews no funciona, el boton de enlace viene desde Revies*/}
+        <Route path="/reviews/:id" element={<MyReviews/>}/>
+        <Route path="/edit/:id" element={<EditReview/>}/>
         <Route path="/bikes" element={<Bikes/>}/>
         <Route path="*" element={<ErrorPage />} />
         <Route path="/bikes/:id" element={<BikesDetails/>}/>
