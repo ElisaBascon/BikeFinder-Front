@@ -27,7 +27,7 @@ return (
             return (
                 <div key={review._id}>
                     <img width="200px" src={review.imageUrl} alt={review.title}/> 
-                    <h2><Link to={`/review/${review._id}`}>{review.title}</Link></h2> 
+                    <h2 key={review._id} ><Link to={`/review/${review._id}`}>{review.title}</Link></h2> 
                 </div>)
         })} 
     </div>

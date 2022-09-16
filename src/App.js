@@ -29,7 +29,7 @@ function App() {
         {/*<Route path="/private" element={<IsPrivate><PrivateView/></IsPrivate>}/>*/}
         <Route path="/newreview" element={<NewReview/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
-        <Route path="/reviews/:id" element={<ReviewDetails/>}/>
+        <Route path="/review/:id" element={<ReviewDetails/>}/>
         <Route path="/bikes" element={<Bikes/>}/>
         <Route path="*" element={<ErrorPage />} />
         <Route path="/bikes/:id" element={<BikesDetails/>}/>
