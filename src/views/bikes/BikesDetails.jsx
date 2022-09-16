@@ -35,7 +35,6 @@ return (
                 <a href={bike.url} target="_blank" rel="noreferrer">
                     <Button>Buy</Button>
                 </a>
-                {/* <p>{bike.url}</p>   */}
             </div>
         )}
     </div>

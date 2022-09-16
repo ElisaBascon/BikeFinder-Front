@@ -29,6 +29,7 @@ return (
                 <p>{review.description}</p> 
             </div>
         )}
+        {!review && <p>Review not found</p>}
     </div>
 )
 

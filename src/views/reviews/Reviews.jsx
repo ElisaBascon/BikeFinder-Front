@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useParams } from 'react-router-dom';
 import axios from "axios";
 
 
 export default function Reviews() {
+    const {id} = useParams(); 
     const storedToken = localStorage.getItem('authToken');
     const [ reviews, setReviews] = useState(null);
     
@@ -22,6 +23,7 @@ export default function Reviews() {
 
 return (
     <div>
+        <button><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/review/${id}`}>My Reviews</NavLink></button>
         {!reviews && <p>loading</p>}
         {reviews && reviews.map(review => {
             return (

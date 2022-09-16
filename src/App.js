@@ -13,6 +13,7 @@ import Reviews from './views/reviews/Reviews';
 import ReviewDetails from './views/reviews/ReviewDetails';
 import Bikes from './views/bikes/Bikes';
 import BikesDetails from './views/bikes/BikesDetails';
+import MyReviews from './views/reviews/MyReviews';
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/newreview" element={<NewReview/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
         <Route path="/review/:id" element={<ReviewDetails/>}/>
+        <Route path="/review/:id" element={<MyReviews/>}/>
         <Route path="/bikes" element={<Bikes/>}/>
         <Route path="*" element={<ErrorPage />} />
         <Route path="/bikes/:id" element={<BikesDetails/>}/>
