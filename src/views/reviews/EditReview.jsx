@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function EditReview() {
-    const navigate = Navigate();
+    const navigate = useNavigate();
     const {id} = useParams();
     const storedToken = localStorage.getItem('authToken');
     const [review, setReview] = useState(null);
@@ -13,7 +13,6 @@ export default function EditReview() {
             try {
                 const response = await axios.get(`http://localhost:8000/api/v1/review/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } })
                 setReview(response.data.data);
-                console.log(response)
             } catch (error) {
                 console.log(error)
             }
@@ -52,8 +51,8 @@ export default function EditReview() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const newReview = await axios.put('http://localhost:8000/api/v1/review', review, { headers: { Authorization: `Bearer ${storedToken}` } });
-            navigate(`/reviews/${newReview.data.data._id}`)
+            const newReview = await axios.put(`http://localhost:8000/api/v1/review/${id}`, review, { headers: { Authorization: `Bearer ${storedToken}` } });
+            navigate(`/review/${newReview.data.data._id}`)
         } catch (error) {
             console.error(error)
         }
@@ -62,12 +61,12 @@ export default function EditReview() {
     return(
         <div>
             <h1>Edit Review</h1>
-            <form onSubmit={handleSubmit}>
+            {review && <form onSubmit={handleSubmit}>
                 <input type="file" onChange={(e) => handleFileUpload(e)} />
                 <input type="text" name="title" placeholder="Title" value={review.title} onChange={handleChange} />
                 <input type="text" name="description" placeholder="Description" value={review.description} onChange={handleChange} />
                 <button type="submit">Save Changes</button>
-            </form>
+            </form>}
         </div>
     )
 

@@ -32,13 +32,12 @@ function App() {
         {/*<Route path="/private" element={<IsPrivate><PrivateView/></IsPrivate>}/>*/}
         <Route path="/newreview" element={<NewReview/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
+        <Route path="/reviews/mine" element={<MyReviews/>}/>
         <Route path="/review/:id" element={<ReviewDetails/>}/>
-        {/*MyReviews no funciona, el boton de enlace viene desde Revies*/}
-        <Route path="/reviews/:id" element={<MyReviews/>}/>
         <Route path="/edit/:id" element={<EditReview/>}/>
         <Route path="/bikes" element={<Bikes/>}/>
-        <Route path="*" element={<ErrorPage />} />
         <Route path="/bikes/:id" element={<BikesDetails/>}/>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   );

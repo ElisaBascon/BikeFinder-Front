@@ -23,7 +23,7 @@ export default function Reviews() {
 
 return (
     <div>
-        <button><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/review/${id}`}>My Reviews</NavLink></button>
+        <button><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/reviews/mine`}>My Reviews</NavLink></button>
         {!reviews && <p>loading</p>}
         {reviews && reviews.map(review => {
             return (
