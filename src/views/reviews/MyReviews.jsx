@@ -27,7 +27,7 @@ const handleDelete = async (reviewId) => {
         const deleted = await axios.delete(`http://localhost:8000/api/v1/review/${reviewId}`, { headers: { Authorization: `Bearer ${storedToken}` } })
         console.log("i have deleted ", deleted)
         toast.success('Review deleted')
-        navigate('/');
+        navigate('/reviews');
     } catch (error) {
         console.error(error)
     }

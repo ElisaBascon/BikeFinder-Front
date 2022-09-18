@@ -7,7 +7,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   return (
     <div>
-      {/*{user && <p>Hello {user.username}</p> }*/}
+      <h1>BikeFinder</h1>
       <ul>
         <li><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/">Home</NavLink></li>
         {!isLoggedIn && <li><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/signup">Sign up</NavLink></li>}
