@@ -5,13 +5,14 @@ import axios from "axios";
 export default function Reviews() {
     const storedToken = localStorage.getItem('authToken')
     const [ bikes, setBikes] = useState(null);
-    const [ setFilteredBike ] = useState();
+    const [ filteredBikes, setFilteredBikes ] = useState(null);
     
     useEffect(() => {
         const getData = async () => {
             try {
                 const response = await axios.get('http://localhost:8000/api/v1/bike', { headers: { Authorization: `Bearer ${storedToken}` } })
                 setBikes(response.data.data);
+                setFilteredBikes(response.data.data);
             } catch (error) {
                 console.log(error)
             }
@@ -20,15 +21,15 @@ export default function Reviews() {
 }, )
 
 const handlePrice = () => {
-    const orderPrice = [...bikes].sort((a, b) => b.price - a.price);
-    setFilteredBike(orderPrice);
+    const orderPrice = [...bikes].sort((a, b) => a.price - b.price);
+    setFilteredBikes(orderPrice);
   }
 
 
 //   Falta logica filtrat productos
 const handleTerrain = () => {
     const filterTerrain = [...bikes].filter((bike => bike.terrain = ''));
-    setFilteredBike(filterTerrain);
+    setFilteredBikes(filterTerrain);
 }
 
 
@@ -52,8 +53,8 @@ return (
           </select>
         <button onClick={handlePrice}>Sort by price</button>
     <div>
-        {!bikes && <p>loading</p>}
-        {bikes && bikes.map(bike => {
+        {!filteredBikes && <p>loading</p>}
+        {filteredBikes && filteredBikes.map(bike => {
             return <p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name}</Link></p>
         })}
         <Outlet/>
