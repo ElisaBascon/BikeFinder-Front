@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-
+import AllReviews from '../components/AllReviews';
+import Reviews from './reviews/Reviews';
 
 export default function Home() {
   const {isLoggedIn, user} = useContext(AuthContext);
@@ -15,7 +16,8 @@ export default function Home() {
           {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/login">Login</NavLink></p>}
           {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/signup">Sign up</NavLink></p>}
           {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/newreview">ADD NEW REVIEW</NavLink></p>}
-          {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/reviews">SEE ALL REVIEWS</NavLink></p>}
+          {isLoggedIn && <p>SEE MY BIKES</p>}
+          {/* {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/reviews">SEE ALL REVIEWS</NavLink></p>} */}
         </div>
 
         <div className='item-2'>
@@ -27,6 +29,7 @@ export default function Home() {
             <div>
               <span> · Take a look at the reviews · Find valuable information · Solve all your doubts · </span>
               <span> · Take a look at the reviews · Find valuable information · Solve all your doubts · </span>
+              <Reviews />
             </div>
           </div>
         </div>

@@ -4,7 +4,23 @@
   box-sizing: border-box;
 }
 
-/* Navbar */
+/* Colours */
+
+:root {
+  --white-background-hard: #f9f9ed;
+  --white-background-soft: #fdfdf8;
+  --brown-terracota: #8d5240;
+  --text-green: #95944c;
+  --text-brown: #585041;
+  --border-line: #000902;
+}
+
+.selected {
+  color: var(--dark-pink);
+}
+
+/* NAVBAR*/
+
 nav {
   width: 100vw;
   padding: 0px 30px;
@@ -15,7 +31,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--yellow);
+  background-color: var(--white-background-hard);
 }
 
 nav ul {
@@ -38,21 +54,7 @@ nav ul li a {
   text-decoration-style: dashed;
 } */
 
-/* Colours */
-
-:root {
-  --brown-terracota: #8d5240;
-  --text-green: #95944c;
-  --text-brown: #585041;
-  --border-line: #000902;
-}
-
-.selected {
-  color: var(--dark-pink);
-}
-
-
-/* Grid */
+/* GRID */
 
 .grid-container {
   height: 87vh;
@@ -68,6 +70,7 @@ div.item-1 {
   padding: 100px 50px;
   border-right: 3px solid var(--border-line);
   border-bottom: 3px solid var(--border-line);
+  background-color: var(--white-background-soft);
 }
 
 div.item-2 {
@@ -77,16 +80,25 @@ div.item-2 {
   border-bottom: 3px solid var(--border-line);
   background-image: url('../public/images/joana-abreu-Sxnke-W-oWk-unsplash.jpg') ;
   background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div.item-3 {
   grid-column: 1 / span 5;
-  grid-row: 15 / span 20;
+  grid-row: 15 / span 16;
   padding: 50px 50px;
   border-bottom: 3px solid var(--border-line);
 }
+div.item-3 {
+  grid-column: 1 / span 5;
+  grid-row: 16 / span 20;
+  padding: 10px 50px;
+  border-bottom: 3px solid var(--border-line);
+}
 
-/* text */
+/* TEXT */
 
 div.item-1 p.Toast {
   font-size: 30px;
@@ -94,10 +106,22 @@ div.item-1 p.Toast {
   color: var(--text-green);
 }
 
-div.item-2 p .centered-item{
-  font-size: 30px;
-  font-family: 'Nothing You Could Do', cursive;
-  color: white;
+div.item-1 p {
+  font-size: 45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--brown-terracota);
+  padding: 10px;
+  text-decoration-skip: none;
+}
+
+div.item-2 p {
+  font-size: 45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--brown-terracota);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 p {
@@ -106,9 +130,7 @@ p {
   font-size: 30px;
 }
 
-/* marquee */
-
-body { margin: 20px; }
+/* MARQUEE */
 
 .marquee {
   height: 25px;
