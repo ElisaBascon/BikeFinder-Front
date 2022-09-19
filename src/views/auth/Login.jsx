@@ -43,7 +43,7 @@ export default function Login() {
         <label>Password</label>
         <input required type="password" name="password" value={user.password} onChange={handleChange} />
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-        <button type="submit">Log in </button>
+        <button type="submit">Go!</button>
       </form>
     </div>
   )

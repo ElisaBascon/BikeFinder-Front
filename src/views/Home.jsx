@@ -8,13 +8,30 @@ export default function Home() {
 
 
   return (
-    <div>
-     {/* <h1>BikeFinder</h1> */}
-        {user && <p>Hello {user.username}</p> }
-        {!isLoggedIn && <h4>Sing Up or Login to find your perfect Gravel</h4>}
-        {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/newreview">Add new Review</NavLink></p>}
-        {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/reviews">See all Reviews</NavLink></p>}
-        {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/bikes">Find your Perfect Bike</NavLink></p>}
-    </div>
+      <div className='grid-container'>
+        <div className='item-1'>
+          {user && <p className='Toast'>Hi {user.username}</p> }
+          {!isLoggedIn && <p className='Toast'>Sing Up or Login to find your perfect Gravel</p>}
+          {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/login">Login</NavLink></p>}
+          {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/signup">Sign up</NavLink></p>}
+          {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/newreview">ADD NEW REVIEW</NavLink></p>}
+          {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/reviews">SEE ALL REVIEWS</NavLink></p>}
+        </div>
+
+        <div className='item-2'>
+          {isLoggedIn && <p className='centered-item'><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/bikes">FIND YOUR PERFECT BIKE</NavLink></p>}
+        </div>
+
+        <div className='item-3'>
+          <div class="marquee">
+            <div>
+              <span> · Take a look at the reviews · Find valuable information · Solve all your doubts · </span>
+              <span> · Take a look at the reviews · Find valuable information · Solve all your doubts · </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
   )
 }

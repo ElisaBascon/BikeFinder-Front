@@ -22,7 +22,7 @@ import BikesDetails from './views/bikes/BikesDetails';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Toaster/>
       <Navbar />
       <Routes>

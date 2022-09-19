@@ -1,3 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+  width: 100vw;
+  padding: 0px 30px;
+  border-bottom: 3px solid var(--border-line);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--yellow);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  list-style-type: none;
+}
+  
+nav ul li:first-child {
+  justify-self: flex-start;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+/* nav ul li a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+} */
+
+/* Colours */
+
+:root {
+  --brown-terracota: #8d5240;
+  --text-green: #95944c;
+  --text-brown: #585041;
+  --border-line: #000902;
+}
+
 .selected {
-  color: red;
+  color: var(--dark-pink);
+}
+
+
+/* Grid */
+
+.grid-container {
+  height: 87vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+div.item-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 15;
+  background-color: var(--yellow);
+  padding: 100px 50px;
+  border-right: 3px solid var(--border-line);
+  border-bottom: 3px solid var(--border-line);
+}
+
+div.item-2 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 15;
+  padding: 100px 50px;
+  border-bottom: 3px solid var(--border-line);
+  background-image: url('../public/images/joana-abreu-Sxnke-W-oWk-unsplash.jpg') ;
+  background-size: 100%;
+}
+
+div.item-3 {
+  grid-column: 1 / span 5;
+  grid-row: 15 / span 20;
+  padding: 50px 50px;
+  border-bottom: 3px solid var(--border-line);
+}
+
+/* text */
+
+div.item-1 p.Toast {
+  font-size: 30px;
+  font-family: 'Nothing You Could Do', cursive;
+  color: var(--text-green);
+}
+
+div.item-2 p .centered-item{
+  font-size: 30px;
+  font-family: 'Nothing You Could Do', cursive;
+  color: white;
+}
+
+p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--text-green);
+  font-size: 30px;
+}
+
+/* marquee */
+
+body { margin: 20px; }
+
+.marquee {
+  height: 25px;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--text-green);
+  font-size: 15px;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
 }

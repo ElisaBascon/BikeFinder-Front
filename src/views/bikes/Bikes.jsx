@@ -55,7 +55,7 @@ return (
     <div>
         {!filteredBikes && <p>loading</p>}
         {filteredBikes && filteredBikes.map(bike => {
-            return <p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name}</Link></p>
+            return (<p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name}</Link></p>)
         })}
         <Outlet/>
     </div>

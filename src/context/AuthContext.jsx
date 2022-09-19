@@ -7,7 +7,7 @@ function AuthProviderWrapper(props) {
   // Store the variables we want to share
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
 
   // Functions to store and delete the token received by the backend in the browser
   const storeToken = (token) => {
