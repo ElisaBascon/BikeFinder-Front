@@ -14,9 +14,9 @@ export default function Home() {
           {!isLoggedIn && <p className='Toast'>Sing Up or Login to find your perfect Gravel</p>}
           {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/login">Login</NavLink></p>}
           {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/signup">Sign up</NavLink></p>}
-          {isLoggedIn && <p className='unstyle'><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/newreview">ADD NEW REVIEW</NavLink></p>}
-          {isLoggedIn && <p>SEE MY BIKES</p>}
-          {/* {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/reviews">SEE ALL REVIEWS</NavLink></p>} */}
+          {isLoggedIn && <p>FAVORITE BIKES</p>}
+          {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/newreview">NEW REVIEW</NavLink></p>}
+          {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/reviews/mine`}>MY REVIEWS</NavLink></p>}
         </div>
 
         <div className='item-2'>

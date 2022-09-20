@@ -39,11 +39,11 @@ return (
         {!myReviews && <p>loading</p>}
         {myReviews && myReviews.map(review => {
             return (
-                <div key={review._id}>
+                <div className="my-reviews" key={review._id}>
                     <img width="200px" src={review.imageUrl} alt={review.title}/> 
                     <h2 key={review._id} ><Link to={`/review/${review._id}`}>{review.title}</Link></h2>
-                    <button onClick={() => navigate(`/edit/${review._id}`)}>Edit</button>  
-                    <button onClick={() => handleDelete(review._id)}>Delete</button> 
+                    <button className="edit-delete" onClick={() => navigate(`/edit/${review._id}`)}>Edit</button>  
+                    <button className="edit-delete" onClick={() => handleDelete(review._id)}>Delete</button> 
                 </div>)
         })} 
     </div>

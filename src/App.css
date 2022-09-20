@@ -20,7 +20,7 @@
 }
 
 .selected {
-  color: var(--dark-pink);
+  color: var(--brown-terracota);
 }
 
 /* NAVBAR*/
@@ -58,13 +58,30 @@ nav ul li a {
   text-decoration-style: dashed;
 } */
 
-/* BUTTON */
-
-button {
-  border-style: none;
-  background-color: none;
+.material-symbols-outlined {
+  color: var(--text-green);
 }
 
+/* BUTTON */
+
+button.edit-delete {
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  border: 2px solid var(--brown-terracota);
+  background-color: var(--white-background-hard);
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--brown-terracota);
+  box-shadow: 0.1em 0.1em var(--brown-terracota);
+  box-shadow: #8d5240;
+}
+
+button .unstyle-Go {
+  border-style: none;
+  background-color: none;
+  all: unset;
+}
 
 /* GRID */
 
@@ -102,8 +119,7 @@ div.item-3 {
   grid-column: 1 / span 5;
   grid-row: 15 / span 20;
   padding: 50px 50px;
-  border-bottom: 3px solid var(--border-line);
-  display: inline-block;
+  /* border-bottom: 3px solid var(--border-line); */
 }
 
 /* Grid Login */
@@ -209,6 +225,7 @@ p {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: var(--text-green);
   font-size: 30px;
+  text-decoration: none;
 }
 
 div.item-login-1 form{
@@ -258,5 +275,7 @@ div.item-login-1 form{
 /* VIEWS */
 div .container-reviews{
   display: inline;
-  background-color: red;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
 }

@@ -7,35 +7,42 @@ export default function Reviews() {
     const [ bikes, setBikes] = useState(null);
     const [ filteredBikes, setFilteredBikes ] = useState(null);
     
-    useEffect(() => {
-        const getData = async () => {
-            try {
-                const response = await axios.get('http://localhost:8000/api/v1/bike', { headers: { Authorization: `Bearer ${storedToken}` } })
-                setBikes(response.data.data);
-                setFilteredBikes(response.data.data);
-            } catch (error) {
-                console.log(error)
-            }
-        }
+useEffect(() => {
+    const getData = async () => {
+        try {
+             const response = await axios.get('http://localhost:8000/api/v1/bike', { headers: { Authorization: `Bearer ${storedToken}` } })
+            setBikes(response.data.data);
+            setFilteredBikes(response.data.data);
+        } catch (error) {
+            console.log(error)
+        }}
     getData();
-}, )
+}, [])
 
 const handlePrice = () => {
     const orderPrice = [...bikes].sort((a, b) => a.price - b.price);
-    setFilteredBikes(orderPrice);
+    
+    return setFilteredBikes(orderPrice);
   }
 
 
-//   Falta logica filtrat productos
-const handleTerrain = () => {
-    const filterTerrain = [...bikes].filter((bike => bike.terrain = ''));
-    setFilteredBikes(filterTerrain);
+//   terminar Logica filtros
+const handleTerrain = async (e) => {
+    
+    if (e.target.value === "") {
+        console.log("string vacio")
+       return setFilteredBikes(bikes)
+    }
+    const filterTerrain = await [...bikes].filter((bike => bike.terrain === e.target.value));
+    console.log("show me bikes of terrain", e.target.value)
+    console.log("filtered", filterTerrain)
+    return setFilteredBikes(filterTerrain);
 }
 
 
 return (
     <div>
-        <select onClick={handleTerrain}>
+        <select onChange={handleTerrain}>
             <option value="">Terrain</option>
             <option value="light">Light</option>
             <option value="intense">Intense</option>
@@ -55,7 +62,7 @@ return (
     <div>
         {!filteredBikes && <p>loading</p>}
         {filteredBikes && filteredBikes.map(bike => {
-            return (<p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name}</Link></p>)
+            return (<p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name} {bike.price}</Link></p>)
         })}
         <Outlet/>
     </div>

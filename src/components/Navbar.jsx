@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className='Logo'><img width="250px" src='./images/Logo.png' alt="logo"></img></div>
         <div>
           <ul>
-            <li><button className='unstyle' onClick={() => navigate(-1)}><span class="material-symbols-outlined">arrow_back_ios</span></button></li>
+            <li><button className='unstyle' onClick={() => navigate(-1)}><span class="material-symbols-outlined">arrow_back</span></button></li>
             <li><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/">Home</NavLink></li>
             {!isLoggedIn && <li><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/login">Login</NavLink></li>}
             {!isLoggedIn && <li><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/signup">Sign up</NavLink></li>}

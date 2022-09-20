@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function Button({children}) {
     return <button>{children}</button>;
@@ -23,7 +24,16 @@ export default function Reviews() {
         }
     getData();
 }, [id, storedToken])
-
+const addToFavorites = async () => {
+    console.log("toy aqui")
+    try {
+        const response = await axios.post(`http://localhost:8000/api/v1/favorite/${bike._id}`, {}, { headers: { Authorization: `Bearer ${storedToken}` } })
+        toast("added to favorites")
+        console.log(response)
+    } catch (error) {
+        console.log(error)
+    }
+}
 return (
     <div>
         {bike && (
@@ -35,7 +45,7 @@ return (
                 <a href={bike.url} target="_blank" rel="noreferrer">
                     <Button>Buy</Button>
                 </a>
-                <button>Save</button>
+                <button onClick={addToFavorites}>Save</button>
             </div>
         )}
     </div>
