@@ -75,6 +75,7 @@ button {
   grid-template-rows: repeat(20, 1fr);
 }
 
+/* Grid Home */
 div.item-1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 15;
@@ -99,15 +100,83 @@ div.item-2 {
 
 div.item-3 {
   grid-column: 1 / span 5;
-  grid-row: 15 / span 16;
+  grid-row: 15 / span 20;
   padding: 50px 50px;
   border-bottom: 3px solid var(--border-line);
+  display: inline-block;
 }
-div.item-3 {
-  grid-column: 1 / span 5;
-  grid-row: 16 / span 20;
-  padding: 10px 50px;
+
+/* Grid Login */
+div.item-login-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 15;
+  background-color: var(--yellow);
+  padding: 100px 50px;
+  border-right: 3px solid var(--border-line);
   border-bottom: 3px solid var(--border-line);
+  background-color: var(--white-background-soft);
+}
+
+div.item-login-2 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 15;
+  padding: 100px 50px;
+  border-bottom: 3px solid var(--border-line);
+  background-image: url('../public/images/patrick-hendry-pNp6SYmaJHQ-unsplash.jpg') ;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid ErrorPage */
+div.item-1-error-page {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 15;
+  background-color: var(--yellow);
+  padding: 100px 50px;
+  border-right: 3px solid var(--border-line);
+  border-bottom: 3px solid var(--border-line);
+  background-color: var(--white-background-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.item-2-error-page {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 15;
+  padding: 100px 50px;
+  border-bottom: 3px solid var(--border-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid New review */
+div.item-newReview-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 15;
+  background-color: var(--yellow);
+  padding: 100px 50px;
+  border-right: 3px solid var(--border-line);
+  border-bottom: 3px solid var(--border-line);
+  background-color: var(--white-background-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.item-newReview-2 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 15;
+  padding: 100px 50px;
+  border-bottom: 3px solid var(--border-line);
+  background-image: url('../public/images/velofilia10.jpg') ;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* TEXT */
@@ -139,6 +208,16 @@ div.item-2 p {
 p {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: var(--text-green);
+  font-size: 30px;
+}
+
+div.item-login-1 form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--brown-terracota);
   font-size: 30px;
 }
 
@@ -174,4 +253,10 @@ p {
 @keyframes marquee {
   0% { left: 0; }
   100% { left: -100%; }
+}
+
+/* VIEWS */
+div .container-reviews{
+  display: inline;
+  background-color: red;
 }

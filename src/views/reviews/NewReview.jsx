@@ -55,13 +55,16 @@ export default function FormReview() {
     }
 
     return(
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input type="file" onChange={(e) => handleFileUpload(e)} />
-                <input type="text" name="title" placeholder="Title" value={review.title} onChange={handleChange} />
-                <input type="text" name="description" placeholder="Description" value={review.description} onChange={handleChange} />
-                <button type="submit">Create</button>
-            </form>
+        <div className='grid-container'>
+            <div className='item-newReview-1'>
+                <form onSubmit={handleSubmit}>
+                    <input type="file" onChange={(e) => handleFileUpload(e)} />
+                    <input type="text" name="title" placeholder="Title" value={review.title} onChange={handleChange} />
+                    <input type="text" name="description" placeholder="Description" value={review.description} onChange={handleChange} />
+                    <button type="submit">Create</button>
+                </form>
+            </div>
+            <div className='item-newReview-2'></div>
         </div>
     )
 }

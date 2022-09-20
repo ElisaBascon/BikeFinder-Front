@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import AllReviews from '../components/AllReviews';
 import Reviews from './reviews/Reviews';
 
 export default function Home() {
@@ -29,9 +28,9 @@ export default function Home() {
             <div>
               <span> · Take a look at the reviews · Find valuable information · Solve all your doubts · </span>
               <span> · Take a look at the reviews · Find valuable information · Solve all your doubts · </span>
-              <Reviews />
             </div>
           </div>
+          {isLoggedIn && <Reviews/>}
         </div>
 
       </div>

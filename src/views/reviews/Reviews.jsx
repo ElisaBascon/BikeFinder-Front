@@ -22,14 +22,14 @@ export default function Reviews() {
 }, [storedToken])
 
 return (
-    <div>
+    <div >
         <button><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/reviews/mine`}>My Reviews</NavLink></button>
         {!reviews && <p>loading</p>}
         {reviews && reviews.map(review => {
             return (
-                <div key={review._id}>
-                    <img width="200px" src={review.imageUrl} alt={review.title}/> 
-                    <h2 key={review._id} ><Link to={`/review/${review._id}`}>{review.title}</Link></h2> 
+                <div className="container-reviews"key={review._id}>
+                    <Link to={`/review/${review._id}`}><img width="150px" src={review.imageUrl} alt={review.title}/></Link> 
+                    {/* <h2 key={review._id} ><Link to={`/review/${review._id}`}>{review.title}</Link></h2>  */}
                 </div>)
         })} 
     </div>

@@ -41,19 +41,23 @@ export default function Signup() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input required type="text" name="username" value={user.username} onChange={handleChange} />
-        <label>Email</label>
-        <input required type="email" name="email" value={user.email} onChange={handleChange} />
-        <label>Password</label>
-        <input required type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value) } />
-        <label>Repeat the password</label>
-        <input required type="password" name="passwordControl" value={passwordControl} onChange={(e) => setPasswordControl(e.target.value)} />
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-        <button type="submit">Register</button>
-      </form>
+    <div className='grid-container'>
+      <div className='item-login-1'>
+        <form onSubmit={handleSubmit}>
+          <label>Username</label>
+          <input required type="text" name="username" value={user.username} onChange={handleChange} />
+          <label>Email</label>
+          <input required type="email" name="email" value={user.email} onChange={handleChange} />
+          <label>Password</label>
+          <input required type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value) } />
+          <label>Repeat the password</label>
+          <input required type="password" name="passwordControl" value={passwordControl} onChange={(e) => setPasswordControl(e.target.value)} />
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+          <button type="submit">Register</button>
+        </form>
+      </div>
+      <div className='item-login-2'></div>
+
     </div>
   )
 }

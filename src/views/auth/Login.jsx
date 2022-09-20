@@ -36,15 +36,20 @@ export default function Login() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>Email</label>
-        <input required type="email" name="email" value={user.email} onChange={handleChange} />
-        <label>Password</label>
-        <input required type="password" name="password" value={user.password} onChange={handleChange} />
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-        <button type="submit">Go!</button>
-      </form>
+    <div className='grid-container'>
+      <div className='item-login-1'>
+        <form onSubmit={handleSubmit}>
+          <label>EMAIL
+          <input required type="email" name="email" value={user.email} onChange={handleChange}/>
+          </label>
+          <label>PASSWORD
+          <input required type="password" name="password" value={user.password} onChange={handleChange} />
+          </label>
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+          <button className='unstyle' type="submit">Go!</button>
+        </form>
+      </div>
+      <div className='item-login-2'></div>
     </div>
   )
 }
