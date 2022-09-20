@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.unstyle {
+  all: unset;
+}
+
 /* Colours */
 
 :root {
@@ -53,6 +57,14 @@ nav ul li a {
   text-decoration: underline;
   text-decoration-style: dashed;
 } */
+
+/* BUTTON */
+
+button {
+  border-style: none;
+  background-color: none;
+}
+
 
 /* GRID */
 
