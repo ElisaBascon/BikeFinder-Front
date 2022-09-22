@@ -15,6 +15,7 @@ import MyReviews from './views/reviews/MyReviews';
 import EditReview from './views/reviews/EditReview';
 import Bikes from './views/bikes/Bikes';
 import BikesDetails from './views/bikes/BikesDetails';
+import Favorites from './views/bikes/Favorites';
 
 
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="/edit/:id" element={<EditReview/>}/>
         <Route path="/bikes" element={<Bikes/>}/>
         <Route path="/bikes/:id" element={<BikesDetails/>}/>
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

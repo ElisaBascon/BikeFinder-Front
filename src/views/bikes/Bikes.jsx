@@ -6,11 +6,18 @@ export default function Reviews() {
     const storedToken = localStorage.getItem('authToken')
     const [ bikes, setBikes] = useState(null);
     const [ filteredBikes, setFilteredBikes ] = useState(null);
+    const filters = [
+        {terrain: ""},
+       {material: ""},
+        {bikeType: ""}
+    ]
     
 useEffect(() => {
     const getData = async () => {
         try {
-             const response = await axios.get('http://localhost:8000/api/v1/bike', { headers: { Authorization: `Bearer ${storedToken}` } })
+            const response = await axios.get('http://localhost:8000/api/v1/bike', { headers: { Authorization: `Bearer ${storedToken}` } })
+            // substituir todas las rutas localhost
+            // `${process.env.REACT_APP_API_URL}/bike`
             setBikes(response.data.data);
             setFilteredBikes(response.data.data);
         } catch (error) {
@@ -27,20 +34,15 @@ const handlePrice = () => {
 
 
 //   terminar Logica filtros
-const handleTerrain = async (e) => {
-    
+const handleTerrain = async (e) => {   
     if (e.target.value === "") {
-        console.log("string vacio")
        return setFilteredBikes(bikes)
     }
     const filterTerrain = await [...bikes].filter((bike => bike.terrain === e.target.value));
-    console.log("show me bikes of terrain", e.target.value)
-    console.log("filtered", filterTerrain)
     return setFilteredBikes(filterTerrain);
 }
 
-const handleBiketype = async (e) => {
-    
+const handleBiketype = async (e) => {   
     if (e.target.value === "") {
        return setFilteredBikes(bikes)
     }
@@ -48,14 +50,14 @@ const handleBiketype = async (e) => {
     return setFilteredBikes(filterBiketype);
 }
 
-const handleMaterial = async (e) => {
-    
+const handleMaterial = async (e) => { 
     if (e.target.value === "") {
        return setFilteredBikes(bikes)
     }
     const filterMaterial = await [...bikes].filter((bike => bike.material === e.target.value));
     return setFilteredBikes(filterMaterial);
 }
+
 
 
 

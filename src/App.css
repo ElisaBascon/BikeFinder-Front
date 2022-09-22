@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  color: var(--text-green);
+}
 
 .unstyle {
   all: unset;
@@ -240,36 +244,31 @@ div.item-login-1 form{
 
 /* MARQUEE */
 
-.marquee {
-  height: 25px;
-  width: 100%;
-
-  overflow: hidden;
-  position: relative;
+.wrapper {
+	width: 100%;
+	cursor: pointer;
+	display: flex;
+	overflow: hidden;
+	white-space: nowrap;
+	transform: translate3d(0, 0, 0);
 }
 
-.marquee div {
-  display: block;
-  width: 200%;
-  height: 30px;
-
-  position: absolute;
-  overflow: hidden;
-
-  animation: marquee 15s linear infinite;
-}
-
-.marquee span {
-  float: left;
-  width: 50%;
+.mover {
+	display: inline-flex;
+	align-items: center;
+	animation: marquee 20s linear infinite;
+	animation-play-state: running;
+	will-change: transform;
+  -webkit-text-stroke: 1px var(--text-green);
+  color: transparent; 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: var(--text-green);
-  font-size: 15px;
+  font-size: 30px;
 }
 
 @keyframes marquee {
-  0% { left: 0; }
-  100% { left: -100%; }
+	100% {
+		transform: translateX(-100%);
+	}
 }
 
 /* VIEWS */
@@ -279,3 +278,34 @@ div .container-reviews{
   align-items: center;
   padding: 0px 50px;
 }
+
+/* CIRCLE */
+.textcirc {
+  width:300px;
+  height:300px;
+  margin:0 auto;
+   position: absolute;
+      top: 10%;
+      left: 10%;
+      -webkit-animation:spin 20s linear infinite;
+      -moz-animation:spin 20s linear infinite;
+      animation:spin 20s linear infinite;
+  }
+  @-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+  }
+  @-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+  }
+  @keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+  }
+  
+  .linew{fill:none;stroke:#fff;stroke-width:2;stroke-miterlimit:10;}
+  
+  .white {
+    color: var(--text-green);
+    fill: var(--text-green);
+    font:normal 8.3px Arial;
+    text-transform:uppercase;
+  }
