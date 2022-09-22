@@ -39,6 +39,25 @@ const handleTerrain = async (e) => {
     return setFilteredBikes(filterTerrain);
 }
 
+const handleBiketype = async (e) => {
+    
+    if (e.target.value === "") {
+       return setFilteredBikes(bikes)
+    }
+    const filterBiketype = await [...bikes].filter((bike => bike.biketype === e.target.value));
+    return setFilteredBikes(filterBiketype);
+}
+
+const handleMaterial = async (e) => {
+    
+    if (e.target.value === "") {
+       return setFilteredBikes(bikes)
+    }
+    const filterMaterial = await [...bikes].filter((bike => bike.material === e.target.value));
+    return setFilteredBikes(filterMaterial);
+}
+
+
 
 return (
     <div>
@@ -48,12 +67,12 @@ return (
             <option value="intense">Intense</option>
             <option value="all road">All Road</option>
           </select>
-          <select onClick={handleTerrain}>
+          <select onChange={handleBiketype}>
             <option value="">Biketype</option>
             <option value="normal">Normal</option>
             <option value="electric">Electric</option>
           </select>
-          <select onClick={handleTerrain}>
+          <select onChange={handleMaterial}>
             <option value="">Material</option>
             <option value="carbon">Carbon</option>
             <option value="aluminum">Aluminum</option>

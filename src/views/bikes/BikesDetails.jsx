@@ -25,7 +25,6 @@ export default function Reviews() {
     getData();
 }, [id, storedToken])
 const addToFavorites = async () => {
-    console.log("toy aqui")
     try {
         const response = await axios.post(`http://localhost:8000/api/v1/favorite/${bike._id}`, {}, { headers: { Authorization: `Bearer ${storedToken}` } })
         toast("added to favorites")
