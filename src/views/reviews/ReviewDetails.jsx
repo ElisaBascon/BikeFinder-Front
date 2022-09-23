@@ -23,10 +23,14 @@ export default function Reviews() {
 return (
     <div>
         {review && (
-            <div>
-                <img width="200px" src={review.imageUrl} alt={review.title}/> 
-                <h2>{review.title}</h2> 
-                <p>{review.description}</p> 
+            <div className='grid-container'>
+                <div className='item-reviewdetail-1'>
+                    <img width="200px" src={review.imageUrl} alt={review.title}/> 
+                </div>
+                <div className='item-reviewdetail-2'>
+                    <h2>{review.title}</h2> 
+                    <p>{review.description}</p> 
+                </div>
             </div>
         )}
         {!review && <p>Review not found</p>}
