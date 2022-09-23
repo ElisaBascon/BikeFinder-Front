@@ -99,6 +99,22 @@ button.Find-Bikes a{
 color: white;
 }
 
+button.Find-Bikes:hover {
+  all: unset;
+  border: 2px solid var(--text-brown);
+  background-color: white;
+  opacity: 0.6;
+  border-radius: 20px;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 15px;
+  text-align: center;
+}
+
+button.Find-Bikes:hover a{
+  color: var(--text-brown);
+  }
+
 /* GRID */
 
 .grid-container {
@@ -115,7 +131,7 @@ div.item-1 {
   background-color: var(--yellow);
   border-right: 3px solid var(--border-line);
   border-bottom: 3px solid var(--border-line);
-  background-color: var(--white-background-hard);
+  background-color: var(--white-background-soft);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,6 +241,15 @@ div.item-1 p {
   font-size: 45px;
   padding: 10px;
 }
+
+div.item-1 p a {
+  color: var(--text-brown);
+}
+
+div.item-1 p:hover a {
+  color: var(--brown-terracota);
+}
+
 
 div.item-2 p a {
   font-size: 45px;
