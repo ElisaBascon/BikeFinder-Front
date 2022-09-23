@@ -30,11 +30,11 @@ export default function Home() {
           
           <div>
             {user && <p className='Toast'>Hi {user.username}</p> }
-            {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/reviews/mine`}>FAVORITE BIKES</NavLink></p>}
+            {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/favorites`}>FAVORITE BIKES</NavLink></p>}
             {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/newreview">NEW REVIEW</NavLink></p>}
             {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/reviews/mine`}>MY REVIEWS</NavLink></p>}
           </div>
-          
+
         </div>
 
         <div className='item-2'>
@@ -56,7 +56,7 @@ export default function Home() {
               ツ SEE ALL REVIEWS ツ SEE ALL REVIEWS ツ SEE ALL REVIEWS          
               </div>
             </div>}
-          {isLoggedIn && <Reviews/>}
+            {isLoggedIn && <Reviews/>}
         </div>
 
       </div>

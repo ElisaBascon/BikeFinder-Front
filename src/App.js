@@ -16,6 +16,7 @@ import EditReview from './views/reviews/EditReview';
 import Bikes from './views/bikes/Bikes';
 import BikesDetails from './views/bikes/BikesDetails';
 import Favorites from './views/bikes/Favorites';
+import Footer from './components/Footer';
 
 
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -54,14 +54,27 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* nav ul li a:hover {
-  text-decoration: underline;
-  text-decoration-style: dashed;
-} */
-
 .material-symbols-outlined {
   color: var(--text-green);
 }
+
+span.material-symbols-outlined {
+  width: 50px;
+}
+
+/* FOOTER */
+
+div.footer {
+  width: 100vw;
+  padding: 30px 60px;
+  border-top: 3px solid var(--border-line);
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--white-background-hard);
+  color: var(--text-green);
+}
+
+
 
 /* BUTTON */
 
@@ -118,16 +131,16 @@ button.Find-Bikes:hover a{
 /* GRID */
 
 .grid-container {
-  height: 87vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(20, 1fr);
+  grid-template-rows: repeat(30, 25px);
 }
 
 /* Grid Home */
 div.item-1 {
   grid-column: 1 / span 2;
-  grid-row: 1 / span 15;
+  grid-row: 1 / span 20;
   background-color: var(--yellow);
   border-right: 3px solid var(--border-line);
   border-bottom: 3px solid var(--border-line);
@@ -139,11 +152,11 @@ div.item-1 {
 
 div.item-2 {
   grid-column: 3 / span 3;
-  grid-row: 1 / span 15;
+  grid-row: 1 / span 20;
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
   background-image: url('../public/images/background-1.png') ;
-  background-size: 100%;
+  background-size: 1020px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,9 +164,8 @@ div.item-2 {
 
 div.item-3 {
   grid-column: 1 / span 5;
-  grid-row: 15 / span 20;
+  grid-row: 20 / span 30;
   padding: 50px 50px;
-  /* border-bottom: 3px solid var(--border-line); */
 }
 
 /* Grid Login */
@@ -173,7 +185,7 @@ div.item-login-2 {
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
   background-image: url('../public/images/patrick-hendry-pNp6SYmaJHQ-unsplash.jpg') ;
-  background-size: 100%;
+  background-size: 1020px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,7 +235,7 @@ div.item-newReview-2 {
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
   background-image: url('../public/images/velofilia10.jpg') ;
-  background-size: 100%;
+  background-size: 1020px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -313,7 +325,12 @@ div.LogIn-SignUp {
 }
 
 /* VIEWS */
-div .container-reviews{
+
+div.container-reviews-out{
+padding: 15px 0px;
+}
+
+div.container-reviews-in{
   display: inline;
   justify-content: space-between;
   align-items: center;
