@@ -62,31 +62,35 @@ const handleMaterial = async (e) => {
 
 
 return (
-    <div>
-        <select onChange={handleTerrain}>
-            <option value="">Terrain</option>
-            <option value="light">Light</option>
-            <option value="intense">Intense</option>
-            <option value="all road">All Road</option>
-          </select>
-          <select onChange={handleBiketype}>
-            <option value="">Biketype</option>
-            <option value="normal">Normal</option>
-            <option value="electric">Electric</option>
-          </select>
-          <select onChange={handleMaterial}>
-            <option value="">Material</option>
-            <option value="carbon">Carbon</option>
-            <option value="aluminum">Aluminum</option>
-          </select>
-        <button onClick={handlePrice}>Sort by price</button>
-    <div>
-        {!filteredBikes && <p>loading</p>}
-        {filteredBikes && filteredBikes.map(bike => {
-            return (<p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name} {bike.price}</Link></p>)
-        })}
-        <Outlet/>
-    </div>
+    <div className='grid-container'>
+        <div className='item-bikes-1' >
+            <select onChange={handleTerrain}>
+                <option value="">Terrain</option>
+                <option value="light">Light</option>
+                <option value="intense">Intense</option>
+                <option value="all road">All Road</option>
+            </select>
+            <select onChange={handleBiketype}>
+                <option value="">Biketype</option>
+                <option value="normal">Normal</option>
+                <option value="electric">Electric</option>
+            </select>
+            <select onChange={handleMaterial}>
+                <option value="">Material</option>
+                <option value="carbon">Carbon</option>
+                <option value="aluminum">Aluminum</option>
+            </select>
+            <button onClick={handlePrice}>Sort by price</button>
+        <div>
+            {!filteredBikes && <p>loading</p>}
+            {filteredBikes && filteredBikes.map(bike => {
+                return (<p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name}</Link></p>)
+            })}
+       
+        </div>
+        </div>
+        <div className='item-bikes-2'><Outlet/></div>
+    
     </div>
 )
 

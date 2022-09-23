@@ -54,6 +54,18 @@ nav ul li a {
   text-decoration: none;
 }
 
+nav ul li img {
+  width: 100px;
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
+nav ul li img:hover {
+  width: 100px;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
 .material-symbols-outlined {
   color: var(--text-green);
 }
@@ -166,6 +178,38 @@ div.item-3 {
   grid-column: 1 / span 5;
   grid-row: 20 / span 30;
   padding: 50px 50px;
+}
+
+/* Grid Bikes */
+div.item-bikes-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 30;
+  background-color: var(--yellow);
+  border-right: 3px solid var(--border-line);
+  border-bottom: 3px solid var(--border-line);
+  background-color: var(--white-background-soft);
+  padding: 100px 50px;
+}
+
+div.item-bikes-1 p a {
+  color: var(--text-brown);
+  padding: 5px 0px;
+}
+
+div.item-bikes-1 p:hover a {
+  color: var(--brown-terracota);
+}
+
+div.item-bikes-2 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 30;
+  padding: 100px 50px;
+  border-bottom: 3px solid var(--border-line);
+  background-image: url('../public/images/background-2.png') ;
+  background-size: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Grid Review Detail */
