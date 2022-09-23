@@ -3,10 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-a{
-  text-decoration: none;
-  color: var(--text-green);
-}
+
 
 .unstyle {
   all: unset;
@@ -87,6 +84,21 @@ button .unstyle-Go {
   all: unset;
 }
 
+button.Find-Bikes {
+  all: unset;
+  border: 2px solid white;
+  background-color: none;
+  border-radius: 20px;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 15px;
+  text-align: center;
+}
+
+button.Find-Bikes a{
+color: white;
+}
+
 /* GRID */
 
 .grid-container {
@@ -101,10 +113,12 @@ div.item-1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 15;
   background-color: var(--yellow);
-  padding: 100px 50px;
   border-right: 3px solid var(--border-line);
   border-bottom: 3px solid var(--border-line);
-  background-color: var(--white-background-soft);
+  background-color: var(--white-background-hard);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div.item-2 {
@@ -112,7 +126,7 @@ div.item-2 {
   grid-row: 1 / span 15;
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
-  background-image: url('../public/images/joana-abreu-Sxnke-W-oWk-unsplash.jpg') ;
+  background-image: url('../public/images/background-1.png') ;
   background-size: 100%;
   display: flex;
   align-items: center;
@@ -209,20 +223,13 @@ div.item-1 p.Toast {
 
 div.item-1 p {
   font-size: 45px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: var(--brown-terracota);
   padding: 10px;
-  text-decoration-skip: none;
 }
 
-div.item-2 p {
+div.item-2 p a {
   font-size: 45px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: var(--brown-terracota);
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #f9f9ed;
 }
 
 p {
@@ -230,6 +237,11 @@ p {
   color: var(--text-green);
   font-size: 30px;
   text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--brown-terracota);
 }
 
 div.item-login-1 form{
@@ -240,6 +252,10 @@ div.item-login-1 form{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: var(--brown-terracota);
   font-size: 30px;
+}
+
+div.LogIn-SignUp {
+  color: var(--brown-terracota);
 }
 
 /* MARQUEE */
@@ -285,8 +301,8 @@ div .container-reviews{
   height:300px;
   margin:0 auto;
    position: absolute;
-      top: 10%;
-      left: 10%;
+   align-items: center;
+   justify-content: center;
       -webkit-animation:spin 20s linear infinite;
       -moz-animation:spin 20s linear infinite;
       animation:spin 20s linear infinite;

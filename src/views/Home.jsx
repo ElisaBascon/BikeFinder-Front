@@ -10,9 +10,13 @@ export default function Home() {
   return (
       <div className='grid-container'>
         <div className='item-1'>
-          {user && <p className='Toast'>Hi {user.username}</p> }
-          
-          <div class="textcirc">
+
+          <div className='LogIn-SignUp' >
+            {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/login">Login</NavLink></p>}
+            {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/signup">Sing Up</NavLink></p>}
+          </div>
+
+          {!isLoggedIn && <div class="textcirc">
             <svg x="0px" y="0px"
               viewBox="0 0 100 100" fill="transparent">
             <path id="circt" d="M50,93C26.25,93,7,73.75,7,50S26.25,7,50,7s43,19.25,43,43c0,23.58-18.98,42.73-42.49,43
@@ -22,16 +26,19 @@ export default function Home() {
             </tspan></textPath>
             </text>
             </svg>
+          </div>}
+          
+          <div>
+            {user && <p className='Toast'>Hi {user.username}</p> }
+            {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/reviews/mine`}>FAVORITE BIKES</NavLink></p>}
+            {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/newreview">NEW REVIEW</NavLink></p>}
+            {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/reviews/mine`}>MY REVIEWS</NavLink></p>}
           </div>
-          {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/login">Login</NavLink></p>}
-          {!isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/signup">Sign up</NavLink></p>}
-          {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/reviews/mine`}>FAVORITE BIKES</NavLink></p>}
-          {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/newreview">NEW REVIEW</NavLink></p>}
-          {isLoggedIn && <p><NavLink className={(element) => element.isActive ? 'selected' : ''} to={`/reviews/mine`}>MY REVIEWS</NavLink></p>}
+          
         </div>
 
         <div className='item-2'>
-          {isLoggedIn && <p className='centered-item'><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/bikes">FIND YOUR PERFECT BIKE</NavLink></p>}
+          {isLoggedIn && <button className='Find-Bikes'><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/bikes">FIND YOUR <br></br>PERFECT BIKE</NavLink></button>}
         </div>
 
         <div className='item-3'>
