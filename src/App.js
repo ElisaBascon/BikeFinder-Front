@@ -38,8 +38,9 @@ function App() {
         <Route path="/reviews/mine" element={<MyReviews/>}/>
         <Route path="/review/:id" element={<ReviewDetails/>}/>
         <Route path="/edit/:id" element={<EditReview/>}/>
-        <Route path="/bikes" element={<Bikes/>}/>
-        <Route path="/bikes/:id" element={<BikesDetails/>}/>
+        <Route path="/bikes" element={<Bikes/>}>
+          <Route path="/bikes/:id" element={<BikesDetails/>}/>
+        </Route>
         <Route path="/favorites" element={<Favorites />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

@@ -55,13 +55,13 @@ nav ul li a {
 }
 
 nav ul li img {
-  width: 100px;
+  width: 90px;
   filter: none;
   -webkit-filter: grayscale(0);
 }
 
 nav ul li img:hover {
-  width: 100px;
+  width: 90px;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
@@ -250,7 +250,7 @@ div.item-reviewdetail-2 p {
 /* Grid Login */
 div.item-login-1 {
   grid-column: 1 / span 2;
-  grid-row: 1 / span 15;
+  grid-row: 1 / span 20;
   background-color: var(--yellow);
   padding: 100px 50px;
   border-right: 3px solid var(--border-line);
@@ -260,7 +260,7 @@ div.item-login-1 {
 
 div.item-login-2 {
   grid-column: 3 / span 3;
-  grid-row: 1 / span 15;
+  grid-row: 1 / span 20;
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
   background-image: url('../public/images/patrick-hendry-pNp6SYmaJHQ-unsplash.jpg') ;
@@ -297,7 +297,7 @@ div.item-2-error-page {
 /* Grid New review */
 div.item-newReview-1 {
   grid-column: 1 / span 2;
-  grid-row: 1 / span 15;
+  grid-row: 1 / span 20;
   background-color: var(--yellow);
   padding: 100px 50px;
   border-right: 3px solid var(--border-line);
@@ -310,7 +310,7 @@ div.item-newReview-1 {
 
 div.item-newReview-2 {
   grid-column: 3 / span 3;
-  grid-row: 1 / span 15;
+  grid-row: 1 / span 20;
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
   background-image: url('../public/images/velofilia10.jpg') ;
@@ -369,7 +369,7 @@ div.item-login-1 form{
   font-size: 30px;
 }
 
-div.LogIn-SignUp {
+div.LogIn-SignUp a {
   color: var(--brown-terracota);
 }
 

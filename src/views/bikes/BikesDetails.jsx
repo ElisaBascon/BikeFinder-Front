@@ -17,7 +17,6 @@ export default function Reviews() {
             try {
                 const response = await axios.get(`http://localhost:8000/api/v1/bike/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } })
                 setBikes(response.data.data);
-                console.log(response)
             } catch (error) {
                 console.log(error)
             }

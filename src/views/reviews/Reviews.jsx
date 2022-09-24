@@ -4,7 +4,6 @@ import axios from "axios";
 
 
 export default function Reviews() {
-    const {id} = useParams(); 
     const storedToken = localStorage.getItem('authToken');
     const [ reviews, setReviews] = useState(null);
     
@@ -13,7 +12,6 @@ export default function Reviews() {
             try {
                 const response = await axios.get('http://localhost:8000/api/v1/review', { headers: { Authorization: `Bearer ${storedToken}` } })
                 setReviews(response.data.data);
-                console.log(response)
             } catch (error) {
                 console.log(error)
             }

@@ -6,11 +6,11 @@ export default function Reviews() {
     const storedToken = localStorage.getItem('authToken')
     const [ bikes, setBikes] = useState(null);
     const [ filteredBikes, setFilteredBikes ] = useState(null);
-    const filters = [
+    /*const filters = [
         {terrain: ""},
        {material: ""},
         {bikeType: ""}
-    ]
+    ]*/
     
 useEffect(() => {
     const getData = async () => {
@@ -24,7 +24,7 @@ useEffect(() => {
             console.log(error)
         }}
     getData();
-}, [])
+}, [storedToken])
 
 const handlePrice = () => {
     const orderPrice = [...bikes].sort((a, b) => a.price - b.price);

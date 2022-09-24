@@ -1,5 +1,6 @@
 import React, { useState, createContext, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext();
 
@@ -8,6 +9,7 @@ function AuthProviderWrapper(props) {
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   // Functions to store and delete the token received by the backend in the browser
   const storeToken = (token) => {
@@ -43,6 +45,7 @@ function AuthProviderWrapper(props) {
   const logOutUser = () => {
     removeToken();
     authenticateUser();
+    navigate("/");
   }
 
   useEffect(() => {
