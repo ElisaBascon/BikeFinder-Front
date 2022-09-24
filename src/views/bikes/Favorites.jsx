@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import toast from 'react-hot-toast';
-import { useNavigate } from "react-router-dom";
 
 export default function Favorites() {
     const storedToken = localStorage.getItem('authToken');
     const [ myFavorites, setMyFavorites] = useState(null);
-    const navigate = useNavigate();
 
     useEffect(() => {
         const getData = async () => {

@@ -6,8 +6,6 @@ import Navbar from './components/Navbar';
 import ErrorPage from './views/ErrorPage';
 import Signup from './views/auth/Signup';
 import Login from './views/auth/Login';
-import PrivateView from './views/PrivateView';
-import IsPrivate from './components/IsPrivate';
 import NewReview from './views/reviews/NewReview';
 import Reviews from './views/reviews/Reviews';
 import ReviewDetails from './views/reviews/ReviewDetails';
