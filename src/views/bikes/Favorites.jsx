@@ -11,7 +11,7 @@ export default function Favorites() {
     useEffect(() => {
         const getData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/v1/favorite`, { headers: { Authorization: `Bearer ${storedToken}` } })
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/favorite`, { headers: { Authorization: `Bearer ${storedToken}` } })
                 setMyFavorites(response.data.data);
             } catch (error) {
                 console.log(error)

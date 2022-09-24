@@ -11,7 +11,7 @@ export default function MyReviews() {
     useEffect(() => {
         const getData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/v1/review/mine`, { headers: { Authorization: `Bearer ${storedToken}` } })
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/review/mine`, { headers: { Authorization: `Bearer ${storedToken}` } })
                 setMyReviews(response.data.data);
                 console.log(response)
             } catch (error) {
@@ -24,7 +24,7 @@ export default function MyReviews() {
 const handleDelete = async (reviewId) => {
     console.log("estoy en delete")
     try {
-        const deleted = await axios.delete(`http://localhost:8000/api/v1/review/${reviewId}`, { headers: { Authorization: `Bearer ${storedToken}` } })
+        const deleted = await axios.delete(`${process.env.REACT_APP_API_URL}/review/${reviewId}`, { headers: { Authorization: `Bearer ${storedToken}` } })
         console.log("i have deleted ", deleted)
         toast.success('Review deleted')
         navigate('/reviews');

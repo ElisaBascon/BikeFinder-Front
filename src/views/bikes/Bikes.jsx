@@ -15,7 +15,7 @@ export default function Reviews() {
 useEffect(() => {
     const getData = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/v1/bike', { headers: { Authorization: `Bearer ${storedToken}` } })
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/bike`, { headers: { Authorization: `Bearer ${storedToken}` } })
             // substituir todas las rutas localhost
             // `${process.env.REACT_APP_API_URL}/bike`
             setBikes(response.data.data);

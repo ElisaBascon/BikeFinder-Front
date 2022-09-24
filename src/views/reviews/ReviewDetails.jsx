@@ -10,7 +10,7 @@ export default function Reviews() {
     useEffect(() => {
         const getData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/v1/review/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } })
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/review/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } })
                 setReviews(response.data.data);
                 console.log(response)
             } catch (error) {

@@ -11,7 +11,7 @@ export default function EditReview() {
     useEffect(() => {
         const getData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/v1/review/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } })
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/review/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } })
                 setReview(response.data.data);
             } catch (error) {
                 console.log(error)
@@ -51,7 +51,7 @@ export default function EditReview() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const newReview = await axios.put(`http://localhost:8000/api/v1/review/${id}`, review, { headers: { Authorization: `Bearer ${storedToken}` } });
+            const newReview = await axios.put(`${process.env.REACT_APP_API_URL}/review/${id}`, review, { headers: { Authorization: `Bearer ${storedToken}` } });
             navigate(`/review/${newReview.data.data._id}`)
         } catch (error) {
             console.error(error)

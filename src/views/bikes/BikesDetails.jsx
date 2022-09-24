@@ -15,7 +15,7 @@ export default function Reviews() {
     useEffect(() => {
         const getData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/v1/bike/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } })
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/bike/${id}`, { headers: { Authorization: `Bearer ${storedToken}` } })
                 setBikes(response.data.data);
             } catch (error) {
                 console.log(error)
@@ -25,7 +25,7 @@ export default function Reviews() {
 }, [id, storedToken])
 const addToFavorites = async () => {
     try {
-        const response = await axios.post(`http://localhost:8000/api/v1/favorite/${bike._id}`, {}, { headers: { Authorization: `Bearer ${storedToken}` } })
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/favorite/${bike._id}`, {}, { headers: { Authorization: `Bearer ${storedToken}` } })
         toast("added to favorites")
         console.log(response)
     } catch (error) {
