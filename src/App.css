@@ -167,7 +167,7 @@ div.item-2 {
   grid-row: 1 / span 20;
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
-  background-image: url('../public/images/background-1.png') ;
+  background-image: url('https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016639/bikeFinder/background-1_cqxtoi.png') ;
   background-size: 1020px;
   display: flex;
   align-items: center;
@@ -205,7 +205,7 @@ div.item-bikes-2 {
   grid-row: 1 / span 30;
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
-  background-image: url('../public/images/background-2.png') ;
+  background-image: url('https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016646/bikeFinder/background-2_zjqd2x.png') ;
   background-size: 1080px;
   display: flex;
   align-items: center;
@@ -263,7 +263,7 @@ div.item-login-2 {
   grid-row: 1 / span 20;
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
-  background-image: url('../public/images/patrick-hendry-pNp6SYmaJHQ-unsplash.jpg') ;
+  background-image: url('https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016798/bikeFinder/patrick-hendry-pNp6SYmaJHQ-unsplash_mtvow2.jpg') ;
   background-size: 1020px;
   display: flex;
   align-items: center;
@@ -313,7 +313,7 @@ div.item-newReview-2 {
   grid-row: 1 / span 20;
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
-  background-image: url('../public/images/velofilia10.jpg') ;
+  background-image: url('https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016811/bikeFinder/velofilia10_jsuud3.jpg') ;
   background-size: 1020px;
   display: flex;
   align-items: center;
@@ -371,6 +371,7 @@ div.item-login-1 form{
 
 div.LogIn-SignUp a {
   color: var(--brown-terracota);
+  z-index: initial;
 }
 
 /* MARQUEE */
