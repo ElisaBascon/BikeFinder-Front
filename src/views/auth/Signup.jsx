@@ -42,7 +42,7 @@ export default function Signup() {
 
   return (
     <div className='grid-container'>
-      <div className='item-login-1'>
+      <div >
         <form onSubmit={handleSubmit}>
           <label>Username</label>
           <input required type="text" name="username" value={user.username} onChange={handleChange} />
