@@ -19,13 +19,19 @@ export default function Favorites() {
 
 
 return (
-    <div>
+    <div className="grid-container-my-reviews" >
         {!myFavorites && <p>loading</p>}
         {myFavorites && myFavorites.map(bike => {
-            return <div key={bike._id}>
-                    {bike.image !== "" ? <img width="200px" src={bike.bikeId.image} alt={bike.bikeId.name}/> : ""}
-                    <h2>{bike.bikeId.name}</h2>
-                </div>
+            return (<div className="my-reviews" key={bike._id}>
+                    {bike.image !== "" ? <img className="my-favorite" src={bike.bikeId.image} alt={bike.bikeId.name}/> : ""}
+                    <div className="my-reviews-text">
+                        <h2>{bike.bikeId.name}</h2>
+                        <h4 className="my-favorite-Bike" >TERRAIN: {bike.bikeId.terrain}</h4>
+                        <h4 className="my-favorite-Bike" >BYKETIPE:{bike.bikeId.biketype}</h4>
+                        <h4 className="my-favorite-Bike" >MATERIAL: {bike.bikeId.material}</h4>
+                        <h3 className="my-bike-price">{bike.bikeId.price}€</h3>
+                    </div>   
+                </div>)
         })} 
     </div>
 )

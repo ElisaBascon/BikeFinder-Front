@@ -553,12 +553,28 @@ div.my-reviews img:hover {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   transform: scale(1.005);
-  /* border-radius: 10; */
 }
 
 div.my-reviews-text{
   padding: 0px 10% 0px 5px;
 }
+
+/* Grid My Favorites */
+
+div.my-reviews img.my-favorite {
+  width: 100%;
+  filter: none;
+  -webkit-filter: hue-rotate(0);
+}
+
+div.my-reviews img.my-favorite:hover {
+  width: 100%;
+  filter: hue-rotate(180deg);
+  -webkit-filter: hue-rotate(180deg);
+  transform: scale(1.005);
+  background-color: #585041;
+}
+
 
 /* TEXT */
 
@@ -614,9 +630,25 @@ h2 {
   padding: 15px 0px;
 }
 
+h2.title-myReview {
+  color: var(--brown-terracota);
+  padding: 15px 0px;
+}
+
+h3.my-bike-price{
+  color: var(--brown-terracota);
+  padding: 15px 0px;
+}
+
 h4 {
   color: var(--white-background-hard);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h4.my-favorite-Bike {
+  color: var(--text-brown);
+  opacity: 0.6;
+  font-style: italic;
 }
 
 h6 {
