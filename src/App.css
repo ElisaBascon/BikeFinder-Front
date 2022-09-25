@@ -249,33 +249,126 @@ div.item-reviewdetail-2 p {
 
 /* Grid Login */
 .grid-container-login {
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(20, 25px);
+  grid-template-rows: repeat(25, 25px);
 }
 
 div.item-login-1 {
   grid-column: 1 / span 2;
-  grid-row: 1 / span 20;
+  grid-row: 1 / span 25;
   background-color: var(--yellow);
   padding: 100px 50px;
   border-right: 3px solid var(--border-line);
-  border-bottom: 3px solid var(--border-line);
   background-color: var(--white-background-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div.item-login-2 {
   grid-column: 3 / span 3;
-  grid-row: 1 / span 20;
+  grid-row: 1 / span 25;
   padding: 100px 50px;
-  border-bottom: 3px solid var(--border-line);
   background-image: url('https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016798/bikeFinder/patrick-hendry-pNp6SYmaJHQ-unsplash_mtvow2.jpg') ;
   background-size: 1020px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+div.item-login-1 form{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--brown-terracota);
+  font-size: 30px;
+}
+
+div.item-login-1 form input{
+  /* all: unset; */
+  width: 250px;
+  padding: 20px 30px;
+  border: 2px solid var(--text-green);
+  border-radius: 10px;
+  display: flex;
+  margin: 20px 0px;
+}
+
+div.item-login-1 form button{
+  all: unset;
+  color: var(--white-background-soft);
+  background-color: var(--text-green);
+  border-radius: 20px;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 15px;
+  text-align: center;
+  }
+
+  div.item-login-1 form button:hover{
+    all: unset;
+    color: var(--white-background-soft);
+    background-color: var(--text-green);
+    border-radius: 20px;
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 15px;
+    text-align: center;
+    opacity: 0.6;
+    }
+
+/* Grid Signup */
+
+div.item-signup-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 25;
+  background-color: var(--yellow);
+  padding: 100px 50px;
+  border-right: 3px solid var(--border-line);
+  background-color: var(--white-background-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.item-signup-1 form{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--brown-terracota);
+  font-size: 20px;
+}
+
+div.item-signup-1 form input{
+  /* all: unset; */
+  width: 250px;
+  padding: 10px 15px;
+  border: 2px solid var(--text-green);
+  border-radius: 10px;
+  display: flex;
+  margin: 20px 0px;
+}
+
+div.item-signup-1 form button{
+  all: unset;
+  color: var(--white-background-soft);
+  background-color: var(--text-green);
+  border-radius: 20px;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 15px;
+  text-align: center;
+  }
+
+  div.item-signup-1 form button:hover{
+    all: unset;
+    color: var(--white-background-soft);
+    background-color: var(--text-green);
+    border-radius: 20px;
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 15px;
+    text-align: center;
+    opacity: 0.6;
+    }
 
 /* Grid ErrorPage */
 div.item-1-error-page {
@@ -352,7 +445,7 @@ div.item-newReview-1 form button{
   text-align: center;
   }
 
-  div.item-newReview-1 form:hover button{
+  div.item-newReview-1 form button:hover{
     all: unset;
     color: var(--white-background-soft);
     background-color: var(--text-green);
@@ -374,7 +467,7 @@ div.item-1 p.Toast {
 
 div.item-1 p {
   font-size: 45px;
-  padding: 10px;
+  padding: 35px;
 }
 
 div.item-1 p a {
@@ -391,6 +484,11 @@ div.item-2 p a {
   color: #f9f9ed;
 }
 
+div.LogIn-SignUp a {
+  position: absolute;
+  z-index: 1;
+}
+
 p {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: var(--text-green);
@@ -403,20 +501,9 @@ a {
   color: var(--brown-terracota);
 }
 
-div.item-login-1 form{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  place-items: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: var(--brown-terracota);
-  font-size: 30px;
-}
 
-div.LogIn-SignUp a {
-  color: var(--brown-terracota);
-  z-index: initial;
-}
+
+
 
 /* MARQUEE */
 
@@ -476,7 +563,7 @@ div.container-reviews-in img:hover {
   width:300px;
   height:300px;
   margin:0 auto;
-   position: absolute;
+  position: absolute;
    align-items: center;
    justify-content: center;
       -webkit-animation:spin 20s linear infinite;
