@@ -34,16 +34,20 @@ const handleDelete = async (reviewId) => {
 }
 
 return (
-    <div>
+    <div className="grid-container-my-reviews" >
         {!myReviews && <p>loading</p>}
         {myReviews && myReviews.map(review => {
             return (
-                <div className="my-reviews" key={review._id}>
-                    <img width="200px" src={review.imageUrl} alt={review.title}/> 
-                    <h2 key={review._id} ><Link to={`/review/${review._id}`}>{review.title}</Link></h2>
-                    <button className="edit-delete" onClick={() => navigate(`/edit/${review._id}`)}>Edit</button>  
-                    <button className="edit-delete" onClick={() => handleDelete(review._id)}>Delete</button> 
-                </div>)
+                    <div className="my-reviews" key={review._id}>
+                    <Link to={`/review/${review._id}`}><img src={review.imageUrl} alt={review.title}/></Link> 
+                        <div className="my-reviews-text">
+                            <h2 key={review._id} >{review.title}</h2>
+                            <h6>{review.description}</h6>                      
+                            <button className="edit-delete" onClick={() => navigate(`/edit/${review._id}`)}>Edit</button>  
+                            <button className="edit-delete" onClick={() => handleDelete(review._id)}>Delete</button> 
+                        </div>
+                    </div>
+                )
         })} 
     </div>
 )

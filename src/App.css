@@ -91,16 +91,33 @@ div.footer {
 /* BUTTON */
 
 button.edit-delete {
+  all: unset;
   width: 60px;
   height: 30px;
-  border-radius: 50px;
-  border: 2px solid var(--brown-terracota);
-  background-color: var(--white-background-hard);
+  border-radius: 10px;
+  border: 2px solid var(--text-brown);
   font-size: 15px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: var(--brown-terracota);
-  box-shadow: 0.1em 0.1em var(--brown-terracota);
-  box-shadow: #8d5240;
+  text-align: center;
+  box-shadow: 0.1em 0.1em var(--text-brown);
+  box-shadow: #585041;
+  margin: 10% 10px 0px 0px;
+}
+
+button.edit-delete:hover {
+  all: unset;
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid var(--text-green);
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: var(--text-green);
+  text-align: center;
+  box-shadow: 0.1em 0.1em var(--text-green);
+  box-shadow:  #95944c;
+  margin: 10% 10px 0px 0px;
 }
 
 button .unstyle-Go {
@@ -492,18 +509,18 @@ div.item-newReview-1 form button{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 15px;
   text-align: center;
-  }
+}
 
-  div.item-newReview-1 form button:hover{
-    all: unset;
-    color: var(--white-background-soft);
-    background-color: var(--text-green);
-    border-radius: 20px;
-    font-size: 35px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 15px;
-    text-align: center;
-    }
+div.item-newReview-1 form button:hover{
+  all: unset;
+  color: var(--white-background-soft);
+  background-color: var(--text-green);
+  border-radius: 20px;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 15px;
+  text-align: center;
+}
 
 /* Grid Edit Review */
 div.item-editReview-2 {
@@ -514,6 +531,34 @@ div.item-editReview-2 {
   background-size: 1020px;
 }
 
+/* Grid My Reviews */
+
+.grid-container-my-reviews {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(30, 25px);
+  background-color: var(--white-background-soft);
+  padding: 0px 0px;
+}
+
+div.my-reviews img {
+  width: 100%;
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
+div.my-reviews img:hover {
+  width: 100%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transform: scale(1.005);
+  /* border-radius: 10; */
+}
+
+div.my-reviews-text{
+  padding: 0px 10% 0px 5px;
+}
 
 /* TEXT */
 
@@ -574,6 +619,10 @@ h4 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h6 {
+  color: var(--text-brown);
+  opacity: 0.6;
+}
 
 
 
@@ -629,6 +678,9 @@ div.container-reviews-in img:hover {
   -webkit-filter: grayscale(100%);
   transform: scale(1.2);
 }
+
+
+
 
 /* CIRCLE */
 .textcirc {
