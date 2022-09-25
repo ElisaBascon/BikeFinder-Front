@@ -143,7 +143,7 @@ button.Find-Bikes:hover a{
 /* GRID */
 
 .grid-container {
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(30, 25px);
@@ -248,6 +248,13 @@ div.item-reviewdetail-2 p {
 }
 
 /* Grid Login */
+.grid-container-login {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(20, 25px);
+}
+
 div.item-login-1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 20;
@@ -295,9 +302,17 @@ div.item-2-error-page {
 }
 
 /* Grid New review */
+
+.grid-container-newReview {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(25, 25px);
+}
+
 div.item-newReview-1 {
   grid-column: 1 / span 2;
-  grid-row: 1 / span 20;
+  grid-row: 1 / span 25;
   background-color: var(--yellow);
   padding: 100px 50px;
   border-right: 3px solid var(--border-line);
@@ -310,15 +325,44 @@ div.item-newReview-1 {
 
 div.item-newReview-2 {
   grid-column: 3 / span 3;
-  grid-row: 1 / span 20;
+  grid-row: 1 / span 25;
   padding: 100px 50px;
   border-bottom: 3px solid var(--border-line);
   background-image: url('https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016811/bikeFinder/velofilia10_jsuud3.jpg') ;
   background-size: 1020px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
+
+div.item-newReview-1 form input{
+  all: unset;
+  padding: 10px;
+  border: 2px solid var(--text-green);
+  border-radius: 20px;
+  display: flex;
+  margin: 20px 0px;
+}
+
+div.item-newReview-1 form button{
+  all: unset;
+  color: var(--white-background-soft);
+  background-color: var(--text-green);
+  border-radius: 20px;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 15px;
+  text-align: center;
+  }
+
+  div.item-newReview-1 form:hover button{
+    all: unset;
+    color: var(--white-background-soft);
+    background-color: var(--text-green);
+    border-radius: 20px;
+    font-size: 35px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 15px;
+    text-align: center;
+    opacity: 0.6;
+    }
 
 /* TEXT */
 

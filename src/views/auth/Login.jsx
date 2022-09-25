@@ -36,7 +36,7 @@ export default function Login() {
   }
 
   return (
-    <div className='grid-container'>
+    <div className='grid-container-login'>
       <div className='item-login-1'>
         <form onSubmit={handleSubmit}>
           <label>EMAIL

@@ -5,7 +5,6 @@ import Reviews from './reviews/Reviews';
 
 export default function Home() {
   const {isLoggedIn, user} = useContext(AuthContext);
-console.log(isLoggedIn)
 
   return (
       <div className='grid-container'>
