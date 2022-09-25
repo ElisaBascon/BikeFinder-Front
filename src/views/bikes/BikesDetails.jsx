@@ -33,17 +33,17 @@ const addToFavorites = async () => {
     }
 }
 return (
-    <div>
+    <div className="bikeDetails-container">
         {bike && (
-            <div>
-                <img width="200px" src={bike.image} alt={bike.name}/> 
+            <div className="bikeDetails">
+                <img  src={bike.image} alt={bike.name}/> 
                 <h2>{bike.name}</h2> 
-                <p>{bike.description}</p>
-                <p>{bike.price}</p> 
-                <a href={bike.url} target="_blank" rel="noreferrer">
-                    <Button>Buy</Button>
+                <h4>{bike.description}</h4>
+                <h2>{bike.price}€</h2> 
+                <a className="buy-save-bike" href={bike.url} target="_blank" rel="noreferrer">
+                    <Button >Buy</Button>
                 </a>
-                <button onClick={addToFavorites}>Save</button>
+                <button className="buy-save-bike" onClick={addToFavorites}>Save</button>
             </div>
         )}
     </div>

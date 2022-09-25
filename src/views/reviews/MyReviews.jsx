@@ -35,7 +35,6 @@ const handleDelete = async (reviewId) => {
 
 return (
     <div>
-        <p>My reviews</p>
         {!myReviews && <p>loading</p>}
         {myReviews && myReviews.map(review => {
             return (

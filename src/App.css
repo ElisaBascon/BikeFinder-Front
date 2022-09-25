@@ -140,6 +140,54 @@ button.Find-Bikes:hover a{
   color: var(--text-brown);
   }
 
+button.buy-save-bike {
+  all: unset;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  color: white;
+  margin: 10px 10px;
+}  
+
+button.buy-save-bike:hover {
+  all: unset;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  color: var(--text-brown);
+  margin: 10px 10px;
+}  
+
+a.buy-save-bike {
+  all: unset;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  color: white;
+}
+
+a.buy-save-bike:hover {
+  all: unset;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  color: var(--text-brown);
+}  
+
+Button {
+  all: unset;
+}
+
 /* GRID */
 
 .grid-container {
@@ -186,7 +234,6 @@ div.item-bikes-1 {
   grid-row: 1 / span 30;
   background-color: var(--yellow);
   border-right: 3px solid var(--border-line);
-  border-bottom: 3px solid var(--border-line);
   background-color: var(--white-background-soft);
   padding: 100px 50px;
 }
@@ -204,12 +251,22 @@ div.item-bikes-2 {
   grid-column: 3 / span 3;
   grid-row: 1 / span 30;
   padding: 100px 50px;
-  border-bottom: 3px solid var(--border-line);
   background-image: url('https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016646/bikeFinder/background-2_zjqd2x.png') ;
-  background-size: 1080px;
+  background-size: 1200px;
+}
+
+div.bikeDetails-container{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+div.bikeDetails img {
+  padding: 15px 50px;
+  width: 650px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 /* Grid Review Detail */
@@ -218,7 +275,6 @@ div.item-reviewdetail-1 {
   grid-row: 1 / span 30;
   background-color: var(--yellow);
   border-right: 3px solid var(--border-line);
-  border-bottom: 3px solid var(--border-line);
   background-color: var(--white-background-soft);
   display: flex;
   align-items: center;
@@ -234,7 +290,6 @@ div.item-reviewdetail-2 {
   grid-column: 3 / span 3;
   grid-row: 1 / span 30;
   padding: 100px 50px;
-  border-bottom: 3px solid var(--border-line);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,7 +340,6 @@ div.item-login-1 form{
 }
 
 div.item-login-1 form input{
-  /* all: unset; */
   width: 250px;
   padding: 20px 30px;
   border: 2px solid var(--text-green);
@@ -297,8 +351,8 @@ div.item-login-1 form input{
 div.item-login-1 form button{
   all: unset;
   color: var(--white-background-soft);
-  background-color: var(--text-green);
-  border-radius: 20px;
+  background-color: var(--text-brown);
+  border-radius: 10px;
   font-size: 35px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 15px;
@@ -314,7 +368,6 @@ div.item-login-1 form button{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 15px;
     text-align: center;
-    opacity: 0.6;
     }
 
 /* Grid Signup */
@@ -338,7 +391,6 @@ div.item-signup-1 form{
 }
 
 div.item-signup-1 form input{
-  /* all: unset; */
   width: 250px;
   padding: 10px 15px;
   border: 2px solid var(--text-green);
@@ -350,8 +402,8 @@ div.item-signup-1 form input{
 div.item-signup-1 form button{
   all: unset;
   color: var(--white-background-soft);
-  background-color: var(--text-green);
-  border-radius: 20px;
+  background-color: var(--text-brown);
+  border-radius: 10px;
   font-size: 35px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 15px;
@@ -367,7 +419,6 @@ div.item-signup-1 form button{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 15px;
     text-align: center;
-    opacity: 0.6;
     }
 
 /* Grid ErrorPage */
@@ -409,7 +460,6 @@ div.item-newReview-1 {
   background-color: var(--yellow);
   padding: 100px 50px;
   border-right: 3px solid var(--border-line);
-  border-bottom: 3px solid var(--border-line);
   background-color: var(--white-background-soft);
   display: flex;
   align-items: center;
@@ -420,7 +470,6 @@ div.item-newReview-2 {
   grid-column: 3 / span 3;
   grid-row: 1 / span 25;
   padding: 100px 50px;
-  border-bottom: 3px solid var(--border-line);
   background-image: url('https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016811/bikeFinder/velofilia10_jsuud3.jpg') ;
   background-size: 1020px;
 }
@@ -429,7 +478,7 @@ div.item-newReview-1 form input{
   all: unset;
   padding: 10px;
   border: 2px solid var(--text-green);
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   margin: 20px 0px;
 }
@@ -437,8 +486,8 @@ div.item-newReview-1 form input{
 div.item-newReview-1 form button{
   all: unset;
   color: var(--white-background-soft);
-  background-color: var(--text-green);
-  border-radius: 20px;
+  background-color: var(--text-brown);
+  border-radius: 10px;
   font-size: 35px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 15px;
@@ -454,8 +503,17 @@ div.item-newReview-1 form button{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 15px;
     text-align: center;
-    opacity: 0.6;
     }
+
+/* Grid Edit Review */
+div.item-editReview-2 {
+  grid-column: 3 / span 3;
+  grid-row: 1 / span 25;
+  padding: 100px 50px;
+  background-image: url('https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664113198/bikeFinder/himiway-bikes-j-I1LomOcyg-unsplash_dgtmh0.jpg') ;
+  background-size: 1020px;
+}
+
 
 /* TEXT */
 
@@ -467,7 +525,7 @@ div.item-1 p.Toast {
 
 div.item-1 p {
   font-size: 45px;
-  padding: 35px;
+  padding: 15px;
 }
 
 div.item-1 p a {
@@ -501,6 +559,20 @@ a {
   color: var(--brown-terracota);
 }
 
+h1 {
+  color: #585041;
+  padding-bottom: 25px;
+}
+
+h2 {
+  color: #585041;
+  padding: 15px 0px;
+}
+
+h4 {
+  color: var(--white-background-hard);
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 
 

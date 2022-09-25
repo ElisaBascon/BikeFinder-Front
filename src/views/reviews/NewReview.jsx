@@ -58,6 +58,7 @@ export default function FormReview() {
         <div className='grid-container-newReview'>
             <div className='item-newReview-1'>
                 <form onSubmit={handleSubmit}>
+                    <h1>New Review</h1>
                     <input type="file" onChange={(e) => handleFileUpload(e)} />
                     <input type="text" name="title" placeholder="Title" value={review.title} onChange={handleChange} />
                     <input type="text" name="description" placeholder="Description" value={review.description} onChange={handleChange} />

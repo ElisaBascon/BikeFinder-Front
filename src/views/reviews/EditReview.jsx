@@ -59,14 +59,18 @@ export default function EditReview() {
     }
 
     return(
-        <div>
-            <h1>Edit Review</h1>
+        <div className='grid-container-newReview'>
+            <div className='item-newReview-1'>
+
             {review && <form onSubmit={handleSubmit}>
+                <h1>Edit Review</h1>
                 <input type="file" onChange={(e) => handleFileUpload(e)} />
                 <input type="text" name="title" placeholder="Title" value={review.title} onChange={handleChange} />
                 <input type="text" name="description" placeholder="Description" value={review.description} onChange={handleChange} />
                 <button type="submit">Save Changes</button>
             </form>}
+            </div>
+            <div className='item-editReview-2'></div>
         </div>
     )
 
