@@ -64,7 +64,7 @@ const handleMaterial = async (e) => {
 return (
     <div className='grid-container'>
         <div className='item-bikes-1' >
-            <select onChange={handleTerrain}>
+            <select className="bikes" onChange={handleTerrain}>
                 <option value="">Terrain</option>
                 <option value="light">Light</option>
                 <option value="intense">Intense</option>
@@ -80,11 +80,13 @@ return (
                 <option value="carbon">Carbon</option>
                 <option value="aluminum">Aluminum</option>
             </select>
-            <button onClick={handlePrice}>Sort by price</button>
+            <button className="bikes" onClick={handlePrice}>Sort by price</button>
         <div>
             {!filteredBikes && <p>loading</p>}
             {filteredBikes && filteredBikes.map(bike => {
-                return (<p key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name}</Link></p>)
+                return (
+                    <h2 className="all-bikes" key={bikes._id}><Link to={`/bikes/${bike._id}`}>{bike.name}</Link></h2>
+                    )
             })}
        
         </div>

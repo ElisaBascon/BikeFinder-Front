@@ -201,8 +201,66 @@ a.buy-save-bike:hover {
   color: var(--text-brown);
 }  
 
+/* button favorites */
+
+a.buy-favorite {
+  all: unset;
+  border: 2px solid #8d5240;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  color: #8d5240;
+}
+
+a.buy-favorite:hover {
+  all: unset;
+  border: 2px solid #95944c;
+  background-color: #95944c;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  color: var(--white-background-soft);
+}  
+
+/* button bikes */
+button.bikes {
+  all: unset;
+  border: 2px solid #8d5240;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  color: #8d5240;
+  margin: 10px 10px;
+}  
+
+button.bikes:hover {
+  all: unset;
+  border: 2px solid #95944c;
+  background-color: #95944c;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  color: var(--white-background-soft);
+  margin: 10px 10px;
+} 
+
 Button {
   all: unset;
+}
+
+/* SELECT */
+select {
+  border: 2px solid #95944c;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 10px;
+  text-align: center;
+  margin: 0px 5px;
+  margin-bottom: 30px;
 }
 
 /* GRID */
@@ -561,18 +619,27 @@ div.my-reviews-text{
 
 /* Grid My Favorites */
 
+.grid-container-favorites {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(25, 25px);
+  background-color: var(--white-background-soft);
+  padding: 0px 0px;
+}
+
 div.my-reviews img.my-favorite {
+  margin-top: 50px;
   width: 100%;
   filter: none;
-  -webkit-filter: hue-rotate(0);
+  -webkit-filter: grayscale(0);
 }
 
 div.my-reviews img.my-favorite:hover {
   width: 100%;
-  filter: hue-rotate(180deg);
-  -webkit-filter: hue-rotate(180deg);
-  transform: scale(1.005);
-  background-color: #585041;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transform: scale(1.01);
 }
 
 
@@ -603,11 +670,6 @@ div.item-2 p a {
   color: #f9f9ed;
 }
 
-div.LogIn-SignUp a {
-  position: absolute;
-  z-index: 1;
-}
-
 p {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: var(--text-green);
@@ -633,6 +695,17 @@ h2 {
 h2.title-myReview {
   color: var(--brown-terracota);
   padding: 15px 0px;
+}
+
+h2.all-bikes {
+  color: var(--brown-terracota);
+  padding: 10px 0px;
+}
+
+h2.all-bikes:hover {
+  color: var(--text-green);
+  padding: 10px 0px;
+  transform: scale(1.05);
 }
 
 h3.my-bike-price{
@@ -667,6 +740,7 @@ h6 {
 	overflow: hidden;
 	white-space: nowrap;
 	transform: translate3d(0, 0, 0);
+  margin-bottom: 30px;
 }
 
 .mover {
@@ -677,6 +751,17 @@ h6 {
 	will-change: transform;
   -webkit-text-stroke: 1px var(--text-green);
   color: transparent; 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+}
+
+.mover-1 {
+	display: inline-flex;
+	align-items: center;
+	animation: marquee 20s linear infinite;
+	animation-play-state: running;
+	will-change: transform;
+  color: var(--text-green); 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 30px;
 }
@@ -697,7 +782,7 @@ div.container-reviews-in{
   display: inline;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 50px;
+  padding: 10px 50px 0px 50px;
 }
 
 div.container-reviews-in img {
@@ -710,6 +795,15 @@ div.container-reviews-in img:hover {
   -webkit-filter: grayscale(100%);
   transform: scale(1.2);
 }
+
+/* div.container-images-noLogin{
+  paddingt: 25px 0px;
+} */
+
+div.container-images-noLogin img {
+  padding: 0px 5px;
+}
+
 
 
 /* CIRCLE */

@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+function Button({children}) {
+    return <button>{children}</button>;
+}
+
 export default function Favorites() {
     const storedToken = localStorage.getItem('authToken');
     const [ myFavorites, setMyFavorites] = useState(null);
@@ -19,17 +23,20 @@ export default function Favorites() {
 
 
 return (
-    <div className="grid-container-my-reviews" >
+    <div className="grid-container-favorites" >
         {!myFavorites && <p>loading</p>}
         {myFavorites && myFavorites.map(bike => {
             return (<div className="my-reviews" key={bike._id}>
                     {bike.image !== "" ? <img className="my-favorite" src={bike.bikeId.image} alt={bike.bikeId.name}/> : ""}
                     <div className="my-reviews-text">
-                        <h2>{bike.bikeId.name}</h2>
+                        <h2>♡ {bike.bikeId.name}</h2>
                         <h4 className="my-favorite-Bike" >TERRAIN: {bike.bikeId.terrain}</h4>
                         <h4 className="my-favorite-Bike" >BYKETIPE:{bike.bikeId.biketype}</h4>
                         <h4 className="my-favorite-Bike" >MATERIAL: {bike.bikeId.material}</h4>
                         <h3 className="my-bike-price">{bike.bikeId.price}€</h3>
+                        <a className="buy-favorite" href={bike.bikeId.url} target="_blank" rel="noreferrer">
+                            <Button >Buy</Button>
+                        </a>
                     </div>   
                 </div>)
         })} 

@@ -14,18 +14,6 @@ export default function Home() {
             {!isLoggedIn && <p><Link to="/login">Login</Link></p>}
             {!isLoggedIn && <p><Link to="/signup">Sign Up</Link></p>}
           </div>
-
-          {!isLoggedIn && <div className="textcirc">
-            <svg x="0px" y="0px"
-              viewBox="0 0 100 100" fill="transparent">
-            <path id="circt" d="M50,93C26.25,93,7,73.75,7,50S26.25,7,50,7s43,19.25,43,43c0,23.58-18.98,42.73-42.49,43
-              "/>
-            <text><textPath href="#circt" startOffset="0%">
-            <tspan className="white">Sign Up or Login to find your perfect Gravel
-            </tspan></textPath>
-            </text>
-            </svg>
-          </div>}
           
           <div>
             {user && <p className='Toast'>Hi {user.username}</p> }
@@ -56,6 +44,32 @@ export default function Home() {
               </div>
             </div>}
             {isLoggedIn && <Reviews/>}
+            {!isLoggedIn && <div className="wrapper">
+              <div className="mover-1">
+              ☞Sign Up or Login to find your perfect Gravel☜
+              </div>
+              <div className="mover">
+              ☞Sign Up or Login to find your perfect Gravel☜  
+              </div>
+              <div className="mover-1">
+              ☞Sign Up or Login to find your perfect Gravel☜
+              </div>
+              <div className="mover">
+              ☞Sign Up or Login to find your perfect Gravel☜     
+              </div>
+            </div>}
+            {!isLoggedIn && <div className='container-images-noLogin' >
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/1_mwfcrv.jpg" alt="imagenportada"/>
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/5_yzlm2a.jpg" alt="imagenportada"/>
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/2_ceee8h.jpg" alt="imagenportada"/>
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/3_nzkf5s.jpg" alt="imagenportada"/>
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/6_igigzd.jpg" alt="imagenportada"/>
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/4_ride9b.jpg" alt="imagenportada"/>
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208742/bikeFinder/7_j1dnhm.jpg" alt="imagenportada"/>
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208742/bikeFinder/11_ogkpdr.jpg" alt="imagenportada"/>
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208742/bikeFinder/8_syhuns.jpg" alt="imagenportada"/>
+              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208743/bikeFinder/10_g3jzlj.jpg" alt="imagenportada"/>
+            </div>}
         </div>
 
       </div>
