@@ -2,10 +2,10 @@
 
 ## Description
 
-This application is called XXX. It is used for ...
+This application is called BikeFinder. It is used for find and compare the best gravel bikes in the market and share the experiences that you live whit your gravel bike.
 
 > Add a picture (logo, design, actual screen, gif, etc, whichever you prefer.)
-![](picture.png)
+![](backgorund-1.png)
 
 ---
 ## Instructions
