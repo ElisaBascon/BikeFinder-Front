@@ -1,12 +1,10 @@
 # BikeFinder
 <img src="public/images/background-1.png">
-## Description
+
+
+Description
 
 This application is called BikeFinder. It is used for find and compare the best gravel bikes in the market and share the experiences that you live whit your gravel bike.
-
-> Add a picture (logo, design, actual screen, gif, etc, whichever you prefer.)
-![](backgorund-1.png)
-
 
 ---
 ## User stories 
