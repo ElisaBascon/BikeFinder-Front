@@ -7,20 +7,6 @@ This application is called BikeFinder. It is used for find and compare the best 
 > Add a picture (logo, design, actual screen, gif, etc, whichever you prefer.)
 ![](backgorund-1.png)
 
----
-## Instructions
-
-When cloning the project, change the <code>sample.env</code> file name for <code>.env</code>. The project will run on **PORT 3000**.
-
-Then, run:
-```bash
-npm install
-```
-
-To start the project run:
-```bash
-npm run start
-```
 
 ---
 ## User stories 
