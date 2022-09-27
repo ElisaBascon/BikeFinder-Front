@@ -1,5 +1,5 @@
 # BikeFinder
-<!-- <img src="[./img/cover.png](https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016639/bikeFinder/background-1_cqxtoi.png)"> -->
+<!-- <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016639/bikeFinder/background-1_cqxtoi.png"> -->
 ## Description
 
 This application is called BikeFinder. It is used for find and compare the best gravel bikes in the market and share the experiences that you live whit your gravel bike.
