@@ -12,9 +12,7 @@ export default function Navbar() {
         <div>
           <ul>
             <li><button className='unstyle' onClick={() => navigate(-1)}><span className="material-symbols-outlined">arrow_back</span></button></li>
-            <li><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/"><img src='https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664016506/bikeFinder/Home_pz3d8n.png' alt='home'></img></NavLink></li>
-            {/* {!isLoggedIn && <li><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/login">Login</NavLink></li>}
-            {!isLoggedIn && <li><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/signup">Sign up</NavLink></li>} */}
+            <li><NavLink className={(element) => element.isActive ? 'selected' : ''} to="/"><span class="material-symbols-outlined">camping</span></NavLink></li>
             {isLoggedIn && <li><button className='unstyle' onClick={() => logOutUser()}><span className="material-symbols-outlined">logout</span></button></li>}
           </ul>
         </div>

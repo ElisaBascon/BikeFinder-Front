@@ -71,7 +71,8 @@ nav ul li img:hover {
 }
 
 span.material-symbols-outlined {
-  width: 50px;
+  width: 80px;
+  font-size: 60px;
 }
 
 /* FOOTER */
