@@ -809,6 +809,18 @@ div.container-reviews-in img:hover {
   transform: scale(1.2);
 }
 
+/* no logging */
+div.container-reviews-nologin{
+  display: inline;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px 0px 00px;
+}
+
+div.container-reviews-nologin img{
+  width: 150px;
+  padding: 0px 20px;
+}
 
 /* CIRCLE */
 .textcirc {

@@ -12,7 +12,7 @@ export default function Home() {
 
           {!isLoggedIn && <p><Link to="/login">Login</Link></p>}
           {!isLoggedIn && <span className='login-signup-link'>⚡</span>}
-          {!isLoggedIn && <p><Link to="/signup">Sign Up</Link></p>}
+          {!isLoggedIn && <p className='login-signup-link' ><Link to="/signup">Sign Up</Link></p>}
 
         {!isLoggedIn && <div className="textcirc">
           <svg x="0px" y="0px"
@@ -69,17 +69,17 @@ export default function Home() {
               ☞Start here your Gravel Adventure and share it☜    
               </div>
             </div>}
-            {!isLoggedIn && <div className='container-images-noLogin' >
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/1_mwfcrv.jpg" alt="imagenportada"/>
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/5_yzlm2a.jpg" alt="imagenportada"/>
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/2_ceee8h.jpg" alt="imagenportada"/>
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/3_nzkf5s.jpg" alt="imagenportada"/>
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/6_igigzd.jpg" alt="imagenportada"/>
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/4_ride9b.jpg" alt="imagenportada"/>
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208742/bikeFinder/7_j1dnhm.jpg" alt="imagenportada"/>
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208742/bikeFinder/11_ogkpdr.jpg" alt="imagenportada"/>
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208742/bikeFinder/8_syhuns.jpg" alt="imagenportada"/>
-              <img width="140px" height="100%" src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208743/bikeFinder/10_g3jzlj.jpg" alt="imagenportada"/>
+            {!isLoggedIn && <div className='container-reviews-nologin' >
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/1_mwfcrv.jpg" alt="imagenportada"/>
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/5_yzlm2a.jpg" alt="imagenportada"/>
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/2_ceee8h.jpg" alt="imagenportada"/>
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/3_nzkf5s.jpg" alt="imagenportada"/>
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/6_igigzd.jpg" alt="imagenportada"/>
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664207383/bikeFinder/4_ride9b.jpg" alt="imagenportada"/>
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208742/bikeFinder/7_j1dnhm.jpg" alt="imagenportada"/>
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208742/bikeFinder/11_ogkpdr.jpg" alt="imagenportada"/>
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208742/bikeFinder/8_syhuns.jpg" alt="imagenportada"/>
+              <img src="https://res.cloudinary.com/ds0q8dpvh/image/upload/v1664208743/bikeFinder/10_g3jzlj.jpg" alt="imagenportada"/>
             </div>}
         </div>
 
