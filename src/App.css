@@ -225,6 +225,7 @@ a.buy-favorite:hover {
 }  
 
 /* button bikes */
+
 button.bikes {
   all: unset;
   border: 2px solid #8d5240;
@@ -253,6 +254,7 @@ Button {
 }
 
 /* SELECT */
+
 select {
   border: 2px solid #95944c;
   border-radius: 10px;
@@ -273,6 +275,7 @@ select {
 }
 
 /* Grid Home */
+
 div.item-1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 20;
@@ -304,6 +307,7 @@ div.item-3 {
 }
 
 /* Grid Bikes */
+
 div.item-bikes-1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 30;
@@ -345,6 +349,7 @@ div.bikeDetails img {
 }
 
 /* Grid Review Detail */
+
 div.item-reviewdetail-1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 30;
@@ -378,6 +383,7 @@ div.item-reviewdetail-2 p {
 }
 
 /* Grid Login */
+
 .grid-container-login {
   height: 100%;
   display: grid;
@@ -581,6 +587,7 @@ div.item-newReview-1 form button:hover{
 }
 
 /* Grid Edit Review */
+
 div.item-editReview-2 {
   grid-column: 3 / span 3;
   grid-row: 1 / span 25;
@@ -675,11 +682,13 @@ p {
   color: var(--text-green);
   font-size: 30px;
   text-decoration: none;
+  z-index: ;
 }
 
 a {
   text-decoration: none;
   color: var(--brown-terracota);
+  z-index: 1;
 }
 
 h1 {
@@ -729,6 +738,10 @@ h6 {
   opacity: 0.6;
 }
 
+span.login-signup-link {
+  padding: 0px 40px;
+  font-size: 60px;
+}
 
 
 /* MARQUEE */
@@ -796,21 +809,13 @@ div.container-reviews-in img:hover {
   transform: scale(1.2);
 }
 
-/* div.container-images-noLogin{
-  paddingt: 25px 0px;
-} */
-
-div.container-images-noLogin img {
-  padding: 0px 5px;
-}
-
-
 
 /* CIRCLE */
 .textcirc {
-  width:300px;
-  height:300px;
-  margin:0 auto;
+  width:150px;
+  height:150px;
+
+  margin-left: -40px;
   position: absolute;
    align-items: center;
    justify-content: center;
