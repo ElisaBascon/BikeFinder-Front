@@ -6,18 +6,11 @@ export default function Reviews() {
     const storedToken = localStorage.getItem('authToken')
     const [ bikes, setBikes] = useState(null);
     const [ filteredBikes, setFilteredBikes ] = useState(null);
-    /*const filters = [
-        {terrain: ""},
-       {material: ""},
-        {bikeType: ""}
-    ]*/
     
 useEffect(() => {
     const getData = async () => {
         try {
             const response = await axios.get(`${process.env.REACT_APP_API_URL}/bike`, { headers: { Authorization: `Bearer ${storedToken}` } })
-            // substituir todas las rutas localhost
-            // `${process.env.REACT_APP_API_URL}/bike`
             setBikes(response.data.data);
             setFilteredBikes(response.data.data);
         } catch (error) {
@@ -33,7 +26,6 @@ const handlePrice = () => {
   }
 
 
-//   terminar Logica filtros
 const handleTerrain = async (e) => {   
     if (e.target.value === "") {
        return setFilteredBikes(bikes)
